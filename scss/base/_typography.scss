@@ -47,11 +47,52 @@ hr {
   border-bottom: $base-border;
 }
 
-
 .job-source-feed {
   max-width: 390px;
   border: $base-border;
 }
+
+.job-footer {
+  border: transparent;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+
+  .link {
+    float: left;
+    margin-left: 1em;
+    display: inline;
+    font-size: 14px;
+  }
+
+  .arrow-nav {
+    float: right;
+    margin-top: 0;
+    
+    a {
+      font-size: 30px;
+      padding: 0 20px;
+      float: left;
+      margin: 0 0 0 1px;
+      background-color: #19A8B8;
+      border: transparent;
+      color: #fff;
+      -webkit-appearance: button;
+      cursor: pointer;
+      transition: background-color 150ms ease;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+
+      &:hover,
+      &:focus {
+        background: #148693;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 
 
 
@@ -205,14 +246,6 @@ hr {
     background: red;
   }
 
-  .text-block-sm_desc {
-    color: $medium-gray;
-    font-size: 12px;
-    text-transform: uppercase;
-    line-height: 1;
-    margin-bottom: 18px;
-  }
-
   .text-block-sm_headline {
     font-weight: $font-weight--bold;
     color: $teal;
@@ -233,6 +266,14 @@ hr {
   }
 
 }
+
+  .text-block-sm_desc {
+    color: $medium-gray;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
 
 
 
@@ -389,76 +430,51 @@ hr {
 
 
 
-
-
-// Uncomment this for a sticky footer.
-//
-// .wrapper-for-content-outside-of-footer {
-//   min-height: 100%;
-//   height: auto !important;
-//   height: 100%;
-//   margin: 0 auto -4em;
-// }
-
-// html, body {
-//  height: 100%;
-// }
-
-// .wrapper-for-content-outside-of-footer::after {
-//   content: "";
-//   display: block;
-// }
-
-// .footer-2, .wrapper-for-content-outside-of-footer::after {
-//   height: 17em;
-
-//   @include media($large-screen) {
-//     height: 4em;
-//   }
-// }
-
-.footer-2 {
-  border: transparent;
-  height: 60px;
-  line-height: 60px;
+.comment {
+  display: table;
   width: 100%;
+  padding: 40px 0;
 
-  .link {
-    float: left;
-    margin-left: 1em;
-    display: inline;
-    font-size: 14px;
+  .comment-image,
+  .comment-content {
+    display: table-cell;
+    // vertical-align: top;
+    vertical-align: middle;
   }
 
-  .footer-social {
-    float: right;
-    margin-top: 0;
-    
-    a {
-      font-size: 30px;
-      padding: 0 20px;
-      float: left;
-      margin: 0 0 0 1px;
-      background-color: #19A8B8;
-      border: transparent;
-      color: #fff;
-      -webkit-appearance: button;
-      cursor: pointer;
-      transition: background-color 150ms ease;
-      user-select: none;
-      -webkit-font-smoothing: antialiased;
+  .comment-image {
+    padding-right: $gutter;
 
-      &:hover,
-      &:focus {
-        background: #148693;
-        color: #fff;
-        cursor: pointer;
-      }
+    img {
+      // height: 3em;
+      height: 219px;
+      max-width: none;
     }
   }
 
+  .comment-content {
+    width: 100%;
+  }
 }
 
+
+.text-block-sm_author {
+  font-weight: $font-weight--bold;
+  color: $dark-gray;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.text-block-sm_body {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.headline-main {
+  font-weight: $font-weight--medium;
+  font-size: 22px;
+}
 
 
 
