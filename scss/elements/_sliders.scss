@@ -1,0 +1,96 @@
+/* ==============================
+  Testimonial Slider
+  ============================== */
+
+.page-section,
+.small-section{
+  width: 100%;
+  display: block; 
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  padding: 40px 0;
+}
+
+.bg-scroll{
+  background-attachment: scroll !important;
+}
+
+.col-md-8 {
+  @include span-columns(8);
+  @include shift(2);
+  text-align: center;
+}
+
+
+.testimonial {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  text-align: center;
+  color: $snow;
+  .body {
+    font-size: 35px;
+    line-height: 52px;
+    font-weight: $font-weight--light;
+    margin-bottom: 30px;
+  }
+  .author {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 18px;
+    font-weight: $font-weight--regular;
+  }
+  .position {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: $font-weight--regular;
+  }
+}
+
+.testimonial-icon {
+  margin-bottom: 7px;
+  text-align: center;
+  font-size: 32px;
+  color: $snow;
+}
+
+.owl-carousel {
+  position: relative;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  font-size: 40px;
+  line-height: 1;
+  background: transparent;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-radius: 0;
+  margin: -23px 0 0 0; // Half of the prev/next buttons height here in negatives to center them perfectly
+}
+
+
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+}
+.owl-prev {
+  left: 0;
+}
+.owl-next {
+  right: 0;
+}

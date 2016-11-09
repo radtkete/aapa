@@ -12,3 +12,51 @@ html,
 body {
   height: 100%;
 }
+
+
+
+/* ==============================
+	Article Content Block
+	============================== */
+
+
+.article {
+	display: table;
+	width: 100%;
+	padding: 40px 0;
+
+	.article-image,
+	.article-content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.article-image {
+		padding-right: $gutter;
+
+		img {
+			// height: 3em;
+			height: 219px;
+			max-width: none;
+		}
+	}
+
+	.article-content {
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -30,3 +30,33 @@ $(document).ready(function() {
     });
   });
 }); 
+
+
+
+
+$(document).ready(function() {
+ 
+  $(".fullwidth-slider").owlCarousel({
+    slideSpeed: 350,
+    singleItem: true,
+    autoHeight: true,
+    navigation: true,
+    navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+  });
+
+
+
+
+
+      var pageSection = $(".home-section, .page-section, .small-section, .split-section");
+    pageSection.each(function(indx){
+        
+        if ($(this).attr("data-background")){
+            $(this).css("background-image", "url(" + $(this).data("background") + ")");
+        }
+    });
+ 
+});
+
+
+

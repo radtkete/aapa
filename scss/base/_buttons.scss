@@ -1,15 +1,36 @@
-#{$all-buttons} {
-  appearance: none;
-  background-color: $action-color;
-  border: 0;
+#{$all-buttons},
+.btn {
+  // appearance: none;
+  // background-color: $action-color;
+  // border: 0;
+  // border-radius: $base-border-radius;
+  // color: #fff;
+  // cursor: pointer;
+  // display: inline-block;
+  // font-family: $base-font-family;
+  // font-size: $base-font-size;
+  // -webkit-font-smoothing: antialiased;
+  // font-weight: 600;
+  // line-height: 1;
+  // padding: $small-spacing $base-spacing;
+  // text-align: center;
+  // text-decoration: none;
+  // transition: background-color $base-duration $base-timing;
+  // user-select: none;
+  // vertical-align: middle;
+  // white-space: nowrap;
+
+  // appearance: none;
+  // background-color: $action-color;
+  // border: 0;
   border-radius: $base-border-radius;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  // font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
-  font-weight: 600;
+  // font-weight: 600;
   line-height: 1;
   padding: $small-spacing $base-spacing;
   text-align: center;
@@ -19,10 +40,29 @@
   vertical-align: middle;
   white-space: nowrap;
 
+  
+  font-size: 14px;
+  font-weight: $font-weight--medium;
+  border: 2px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  // box-shadow: inset 0px 1px 2px 0px rgba(255,255,255,0.5);
+  // @include background(linear-gradient(lighten($action-color, 10%),$action-color ) center no-repeat) ;
+
   &:hover,
   &:focus {
     background-color: shade($action-color, 20%);
-    color: #fff;
+    // color: #fff;
+
+    color: rgba($white, .85);
+    text-decoration: none;
+    outline: none;
+    border-color: transparent;    
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
   }
 
   &:disabled {
@@ -33,4 +73,115 @@
       background-color: $action-color;
     }
   }
+}
+
+
+.btn-border {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+
+    color: $action-color;
+    border: 2px solid $action-color;
+    background: transparent;
+    &:hover,
+    &:focus{
+      color: #fff;
+      border-color: transparent;
+      background: $action-color;
+    }
+}
+
+
+
+
+
+.btn-circle {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.btn-mod,
+a.btn-mod{
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  line-height: 1.42857143;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+
+
+
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px 13px;
+  color: #fff;
+  background: rgba(34,34,34, .9);
+  border: 2px solid transparent;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  -webkit-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);  
+  -moz-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
+  -o-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -ms-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
+  transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+.btn-mod:hover,
+.btn-mod:focus,
+a.btn-mod:hover,
+a.btn-mod:focus{
+  font-weight: 400;
+  color: rgba(255,255,255, .85);
+  background: rgba(0,0,0, .7);
+  text-decoration: none;
+  outline: none;
+  border-color: transparent;    
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-mod:active{
+  cursor: pointer !important;
+  outline: none !important;
+}
+
+
+
+
+
+
+.col-md-3 {
+  @include span-columns(3);
 }
