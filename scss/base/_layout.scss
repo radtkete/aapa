@@ -16,7 +16,7 @@ body {
 
 
 /* ==============================
-	Article Content Block
+	Article - Content Block
 	============================== */
 
 
@@ -25,13 +25,13 @@ body {
 	width: 100%;
 	padding: 40px 0;
 
-	.article-image,
-	.article-content {
+	.article_image,
+	.article_content {
 		display: table-cell;
 		vertical-align: middle;
 	}
 
-	.article-image {
+	.article_image {
 		padding-right: $gutter;
 
 		img {
@@ -41,14 +41,46 @@ body {
 		}
 	}
 
-	.article-content {
+	.article_content {
 		width: 100%;
 	}
 }
 
 
 
+/* ==============================
+	Article Full Width - Content Block
+	============================== */
 
+.article-vert {
+  display: table;
+  width: 100%;
+
+  .article-vert_image,
+  .article-vert_content {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .article-vert_image {
+    padding-right: 1.4em;
+
+    > img {
+      display: block;
+      max-width: none;
+      // height: auto;
+      // width: 187px;
+
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .article-vert_content {
+    width: 100%;
+    padding-left: 1.4em;
+  }
+}
 
 
 

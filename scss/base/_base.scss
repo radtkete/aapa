@@ -61,20 +61,17 @@ body {
   // border: 1px solid green;
 }
 
+.col-md-7 {
+  @include span-columns(12);
+}
 
+.col-md-7 {
+  @include span-columns(8);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.col-md-5 {
+  @include span-columns(4);
+}
 
 
 
