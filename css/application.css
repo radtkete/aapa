@@ -329,6 +329,39 @@ select {
   width: 100%;
 }
 
+form.search-bar {
+  position: relative;
+}
+
+form.search-bar input[type=search] {
+  appearance: none;
+  background-color: white;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1em;
+  font-style: italic;
+  margin: 0;
+  padding: 0.5em 0.5em;
+  position: relative;
+  transition: border-color;
+  width: 100%;
+}
+
+form.search-bar button[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  outline: none;
+  padding: 5px 10px;
+}
+
+form.search-bar button[type=submit] img {
+  height: 12px;
+  opacity: 0.7;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -775,6 +808,27 @@ hr {
   right: 0;
 }
 
+.expander {
+  width: 25em;
+}
+
+.expander .expander-trigger {
+  display: block;
+}
+
+.expander .expander-trigger:before {
+  content: "\25BC";
+  margin-right: 0.5em;
+}
+
+.expander .expander-hidden:before {
+  content: "\25BA";
+}
+
+.expander .expander-hidden + .expander-content {
+  display: none;
+}
+
 /* ==============================
   Testimonial Slider
   ============================== */
@@ -876,6 +930,86 @@ hr {
 
 .owl-next {
   right: 0;
+}
+
+/* ==============================
+  Navigation
+  ============================== */
+.breadcrumb {
+  list-style: none;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+}
+
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #BBBBBB;
+  content: "/\00a0";
+}
+
+.breadcrumb > li a {
+  color: #BBBBBB;
+}
+
+.breadcrumb > li a:hover, .breadcrumb > li a:active {
+  color: #007A87;
+}
+
+.breadcrumb > .active {
+  color: #007A87;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.pagination ul li {
+  display: inline;
+  list-style: none;
+}
+
+.pagination ul ul li {
+  display: none;
+}
+
+.pagination ul ul li:nth-child(1), .pagination ul ul li:nth-child(2), .pagination ul ul li:nth-child(3) {
+  display: inline;
+}
+
+@media screen and (min-width: 900px) {
+  .pagination ul ul li {
+    display: inline;
+  }
+}
+
+.pagination ul li a {
+  background: white;
+  border-radius: 3px;
+  border: 1px solid #E8E8E8;
+  color: #BBBBBB;
+  outline: none;
+  padding: 0.375em 0.809em;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination ul li a:hover, .pagination ul li a:focus {
+  background: #19A8B8;
+  color: #FFFFFF;
+}
+
+.pagination ul li a:active, .pagination ul li a.active {
+  background: #BBBBBB;
+  color: #FFFFFF;
 }
 
 /* ==============================

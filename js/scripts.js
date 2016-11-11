@@ -46,6 +46,12 @@ $(document).ready(function() {
 
 
 
+  $('.expander-trigger').click(function(){
+    $(this).toggleClass("expander-hidden");
+  });
+
+
+
 
 
       var pageSection = $(".home-section, .page-section, .small-section, .split-section");
@@ -57,6 +63,7 @@ $(document).ready(function() {
     });
  
 });
+
 
 
 
