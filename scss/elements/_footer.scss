@@ -1,0 +1,83 @@
+/* ==============================
+  Footer
+  ============================== */
+
+#footer-blue {
+  background: #003C69;
+  color: $white;
+
+  border-top: 6px solid #002D4B;
+  border-bottom: 6px solid #002D4B;
+  .footer-top {
+    padding-top: 75px;
+    padding-bottom: 50px;
+    border-bottom: 3px solid #002D4B;
+  }
+
+  .footer-bottom {
+    font-weight: $font-weight--regular;
+    font-size: 14px;
+    ul {
+      display: block;
+      margin: 0;
+      padding-left: 0;
+      margin-top: 20px;
+      margin-bottom: 15px;
+
+      li {
+        line-height: 1.5em;
+        padding-right: 1em;
+
+        a {
+          color: $white;
+        }
+
+        @include media($large-screen) {
+          display: inline;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+
+.hr-footer {
+  width: 20px;
+  border-bottom: 3px solid $base-border-color;
+  margin: 0;
+  margin: 10px 0;
+}
+
+.footer-headline {
+  @extend .text-author;
+  margin-bottom: 14px;
+  color: $white;
+}
+
+.footer-links > li,
+.col-lg-3 > p {
+  font-weight: $font-weight--regular;
+  font-size: 14px;
+  line-height: 27px;
+  a {
+    color: $white;
+  }
+}
+
+
+
+
+.col-lg-9 {
+  @include span-columns(8);
+  @include shift(1);
+  @include omega();
+}
+
+.col-lg-3 {
+  @include span-columns(3);
+}
+
+.col-lg-3-9 {
+  @include span-columns(1 of 3);
+}

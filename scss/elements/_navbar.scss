@@ -26,39 +26,34 @@ header.navigation {
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 12em;
-  $horizontal-bar-mode: $large-screen;
+  $horizontal-bar-mode: 900px;
 
   background-color: $navigation-background;
-  // border-bottom: 1px solid darken($navigation-background, 10);
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
 
-
-.button-block {
-  background: transparent;
-  display: inline;
-  line-height: 60px;
-  text-decoration: none;
-  width: auto;
-}
+  height: 125px;
+  border-bottom: 5px solid $base-border-color;
 
 
-.nav-linkk {
-  color: rgba(255, 255, 255, 0.7);
-  display: inline-block;
-  text-decoration: none;
-  float: left;
-  padding-left: 25px;
-  padding-right: 25px;
-  text-transform: uppercase;;
-  &:last-child {
-    background: #007A87;
+  @include media ($horizontal-bar-mode) {
+    height: $navigation-height;
+    border-bottom: 0;
   }
-}
 
+
+
+
+
+
+// #js-navigation-menu {
+//   padding-top: 20px;
+//   background-color: $navigation-background;
+// }
 
   .navigation-wrapper {
+    @extend .container;
     @include clearfix;
     position: relative;
     z-index: 9999;
@@ -67,7 +62,6 @@ header.navigation {
   .logo {
     float: left;
     max-height: $navigation-height;
-    padding-left: $navigation-padding;
     padding-right: 2em;
     padding-top: 10px;
     padding-bottom: 10px; 
@@ -75,22 +69,88 @@ header.navigation {
     img {
       max-height: $navigation-height;
       height: 42px;
-      width: 82px;
-      // padding: 0.8em 0;
+      width: 82px;    
     }
   }
 
-  // Mobile view
+
+
+  .navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 16px;
+    text-align: center;
+    margin: auto;
+
+
+    @include media ($horizontal-bar-mode) {
+      position: relative;
+      width: auto;
+      top: 0;
+
+      float: left;
+      max-height: $navigation-height;
+      padding-right: 2em;
+      padding-top: 10px;
+      padding-bottom: 10px; 
+    }
+
+    img {
+      height: 68px;
+      width: 136px; 
+
+      @include media ($horizontal-bar-mode) {
+        max-height: $navigation-height;
+        height: 42px;
+        width: 82px;  
+      }
+    }
+
+  }
+
+
+.btn-blue {
+  border-radius: 5px !important;
+  padding: 15px 25px !important;
+  font-size: 22px !important;
+  text-decoration: none !important;
+  margin: 20px !important;
+  color: #fff !important;
+  position: relative !important;
+  display: inline-block !important;
+  background-color: #003865 !important;
+  box-shadow: 0px 5px 0px 0px #0062b2 !important;
+}
+.btn-blue:active {
+  transform: translate(0px, 5px) !important;
+  -webkit-transform: translate(0px, 5px) !important;
+  box-shadow: 0px 1px 0px 0px !important;
+}
+.btn-blue:hover {
+  color: #fff !important;
+  background-color: #0071cb !important;
+}
+
+
+
+  /* ==============================
+  Mobile view
+  ============================== */
 
   .navigation-menu-button {
     color: $navigation-color;
     display: block;
-    float: right;
-    line-height: $navigation-height;
+    // float: right;
+    // line-height: $navigation-height;
     margin: 0;
-    padding-right: 1em;
+    // padding-right: 1em;
     text-decoration: none;
     text-transform: uppercase;
+
+    position: absolute;
+    left: 35px;
+    top: 40px;
 
     @include media ($horizontal-bar-mode) {
       display: none;
@@ -106,13 +166,16 @@ header.navigation {
 
   nav {
     float: none;
-    min-height: $navigation-height;
+    padding-top: 125px;
     z-index: 9999999;
 
     @include media ($horizontal-bar-mode) {
+      min-height: $navigation-height;
       float: left;
+      padding-top: 0;
     }
   }
+
 
   ul.navigation-menu {
     clear: both;
@@ -123,6 +186,9 @@ header.navigation {
     width: 100%;
     z-index: 9999;
 
+    padding-top: 20px;
+    background-color: $navigation-background;
+
     &.show {
       display: block;
     }
@@ -131,12 +197,13 @@ header.navigation {
       display: inline;
       margin: 0;
       padding: 0;
+      background-color: transparent;
     }
   }
 
   // The nav items
 
-  ul li.nav-link {
+  li.nav-link {
     background: $navigation-background;
     display: block;
     line-height: $navigation-height;
@@ -175,226 +242,187 @@ header.navigation {
     padding-bottom: 3px;
   }
 
-  // Sub menus
 
-  li.more.nav-link {
-    padding-right: 0;
 
-    @include media($horizontal-bar-mode) {
-      padding-right: $navigation-submenu-padding;
-    }
 
-    > ul > li:first-child a  {
-      padding-top: 1em;
-    }
 
-    a {
-      margin-right: $navigation-submenu-padding;
-    }
+// Elements on the far right
 
-    > a {
-      padding-right: 0.6em;
-    }
+.navigation-tools {
+  background: transparent;
+  clear: both;
+  display: block;
+  height: 45px;
 
-    > a::after {
-      @include position(absolute, auto -0.4em auto auto);
-      color: $navigation-color;
-      content: "\25BE";
-    }
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  padding: 0 1em;
+
+  @include media($horizontal-bar-mode) {
+    position: relative;
+    top: 0;
+    width: auto;
+    padding: 0;
+
+
+    background: transparent;
+    clear: none;
+    float: right;
+  }
+}
+
+// Search bar
+
+.search-container {
+  // float: left;
+  height: 45px;
+  width: 100%;
+
+  @include media($horizontal-bar-mode) {
+    float: left;
+    display: inline-block;
+    position: relative;
+    width: 16em;
+    height: 60px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+
   }
 
-  li.more {
-    overflow: visible;
-    padding-right: 0;
-
-    a {
-      padding-right: 0.8em;
-    }
-
-    > a {
-      padding-right: 1.6em;
-      position: relative;
-
-      @include media($horizontal-bar-mode) {
-        margin-right: $navigation-submenu-padding;
-      }
-
-      &::after {
-        content: "›";
-        font-size: 1.2em;
-        position: absolute;
-        right: $navigation-submenu-padding / 2;
-      }
-    }
-
-    &:focus > .submenu,
-    &:hover > .submenu {
-      display: block;
-    }
-
+  .search-bar {
+    width: 100%;
+    border: 4px solid #E8E8E8;
+    border-radius: 4px;
     @include media($horizontal-bar-mode) {
-      padding-right: 0.8em;
-      position: relative;
+      border: 1px solid #E8E8E8;
     }
   }
+}
 
-  ul.submenu {
-    display: none;
+
+
+
+
+
+
+
+
+
+.button-block {
+display: none;
+
+  @include media($horizontal-bar-mode) {
+    background: transparent;
+    clear: none;
+    float: right;
+
+    background: transparent;
+    display: inline;
+    line-height: 60px;
+    text-decoration: none;
+    width: auto;
+
+  }
+
+  .button-block-btn {
+    float: left;
+    display: inline-block;
+    background-color: $color-primary;
+    color: rgba($white, 0.7);
+    padding: 0 25px;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+      background-color: shade($color-primary, 20%);
+      color: $white;
+    }
+    &:last-child {
+      background-color: $color-secondary;
+      &:hover,
+      &:focus {
+        background-color: shade($color-secondary, 20%);
+        color: $white;
+      }
+    }
+  }
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+// Uncomment this for a sticky footer.
+//
+// .wrapper-for-content-outside-of-footer {
+//   min-height: 100%;
+//   height: auto !important;
+//   height: 100%;
+//   margin: 0 auto -4em;
+// }
+
+// html, body {
+//  height: 100%;
+// }
+
+// .wrapper-for-content-outside-of-footer:after {
+//   content: "";
+//   display: block;
+// }
+
+// .footer, .wrapper-for-content-outside-of-footer:after {
+//   $large-screen: 50em !default;
+//   height: 12em;
+
+//   @include media($large-screen) {
+//     height: 4em;
+//   }
+// }
+
+.footer-plain {
+  $large-screen: 50em !default;
+
+  .footer-logo {
+    margin-bottom: 1em;
+    margin-right: 1em;
+
+    @include media($large-screen) {
+      float: left;
+      margin-bottom: 0;
+    }
+
+    img {
+      height: 2.2em;
+    } 
+  }
+
+  ul {
+    margin: 0;
     padding-left: 0;
 
-    @include media($horizontal-bar-mode) {
-      left: -$navigation-submenu-padding;
-      position: absolute;
-      top: 1.5em;
-    }
-
-    .submenu.fly-out-right {
-      @include media($horizontal-bar-mode) {
-        left: $navigation-submenu-width - 0.2em;
-        top: 0;
-      }
-    }
-
-    .submenu.fly-out-left {
-      @include media($horizontal-bar-mode) {
-        left: -$navigation-submenu-width + 0.2em;
-        top: 0;
-      }
-    }
-
-    .submenu {
-      @include media($horizontal-bar-mode) {
-        left: $navigation-submenu-width - 0.2em;
-        top: 0;
-      }
+    @include media($large-screen) {
+      float: left;
+      padding-top: 0.3em;
     }
 
     li {
-      display: block;
-      padding-right: 0;
+      line-height: 1.5em;
+      padding-right: 1em;
 
-      @include media($horizontal-bar-mode) {
-        line-height: $navigation-height / 1.3;
-
-        &:first-child > a {
-          border-top-left-radius: $base-border-radius;
-          border-top-right-radius: $base-border-radius;
-        }
-
-        &:last-child > a {
-          border-bottom-left-radius: $base-border-radius;
-          border-bottom-right-radius: $base-border-radius;
-          padding-bottom: 0.7em;
-        }
-      }
-
-      a {
-        background-color: darken($navigation-background, 3%);
-        display: inline-block;
-        text-align: right;
-        width: 100%;
-
-        @include media($horizontal-bar-mode) {
-          background-color: $navigation-background;
-          padding-left: $navigation-submenu-padding;
-          text-align: left;
-          width: $navigation-submenu-width;
-        }
-      }
-    }
-  }
-
-  // Elements on the far right
-
-  .navigation-tools {
-    background: #505050;
-    clear: both;
-    display: block;
-    height: $navigation-height;
-
-    @include media($horizontal-bar-mode) {
-      background: transparent;
-      clear: none;
-      float: right;
-    }
-  }
-
-  // Search bar
-
-  .search-bar {
-    $search-bar-border-color: $base-border-color;
-    $search-bar-border: 1px solid $search-bar-border-color;
-    $search-bar-background: lighten($search-bar-border-color, 10%);
-
-    float: left;
-    // padding: 0.85em 0.85em 0.7em 0.6em;
-    padding: 5px 0.85em 5px 0.6em;
-    width: 60%;
-
-    form {
-      position: relative;
-
-      input[type=search] {
-        background: $navigation-search-background;
-        border: $navigation-search-border;
-        border-radius: $base-border-radius * 2;
-        box-sizing: border-box;
-        color: $base-font-color;
-        font-size: 0.9em;
-        font-style: italic;
-        margin: 0;
-        padding: 0.5em 0.8em;
-        width: 100%;
-
-        height: 50px;
-
-        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-          color: $color-secondary;
-        }
-        &::-moz-placeholder { /* Firefox 19+ */
-          color: $color-secondary;
-        }
-        &:-ms-input-placeholder { /* IE 10+ */
-          color: $color-secondary;
-        }
-        &:-moz-placeholder { /* Firefox 18- */
-          color: $color-secondary;
-        }
-
-
-        @include media($horizontal-bar-mode) {
-          width: 100%;
-        }
-      }
-
-      button[type=submit] {
-        background: $navigation-search-background;
-        border: 0;
-        bottom: 0.3em;
-        left: auto;
-        outline: none;
-        padding: 0 9px;
-        position: absolute;
-        right: 0.3em;
-        top: 0.3em;
-
-        i {
-          color: $color-secondary;
-          height: 12px;
-          opacity: 0.7;
-          padding: 1px;
-        }
-      }
-    }
-
-    @include media($horizontal-bar-mode) {
-      display: inline-block;
-      position: relative;
-      width: 16em;
-
-      input {
-        box-sizing: border-box;
-        display: block;
+      @include media($large-screen) {
+        display: inline;
+        text-align: left;
       }
     }
   }

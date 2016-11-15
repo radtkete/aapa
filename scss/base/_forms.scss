@@ -83,8 +83,99 @@ select {
 
 
 
+// Custom Checkbox with Solid BG
 
 
+
+#custom-checkbox {
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    font-weight: $font-weight--regular;
+    line-height: 36px;
+  }
+
+  input[type="checkbox"] + label:before {
+    border: $base-border;
+    content: "\00a0";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    // margin-right: $small-spacing / 2;
+    margin-right: 24px;
+    padding: 0;
+    vertical-align: middle;
+  }
+
+  input[type="checkbox"]:checked + label:before {
+    background: $action-color;
+    // content: "\2713";\
+    content: "\00a0";
+    text-align: center;
+  }
+
+  input[type="checkbox"]:checked + label:after {
+    // font-weight: bold;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.search-container {
+  display: block;
+  margin: 0 auto;
+
+  i.search-icon {
+    position: relative;
+    float: right;
+    top: -30px;
+    right: 15px;
+  }
+
+  input.search-bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    border: $base-border;
+    outline: none;
+    border-radius: 0px;
+    &:focus{
+      border: 1px solid #008ABF;
+      transition: 0.35s ease;
+      color: #008ABF;
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        transition: opacity 0.45s ease; 
+        opacity: 0;
+       }
+      &::-moz-placeholder { /* Firefox 19+ */
+        transition: opacity 0.45s ease; 
+        opacity: 0;
+       }
+      &:-ms-input-placeholder { /* IE 10+ */
+       transition: opacity 0.45s ease; 
+       opacity: 0;
+       }
+       &:-moz-placeholder { /* Firefox 18- */
+       transition: opacity 0.45s ease; 
+       opacity: 0;
+       }    
+     }
+   }
+
+}
 
 
 
@@ -92,43 +183,34 @@ select {
 // Search Bar
 
 
-form.search-bar {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-spacing: 1.5em !default;
-  $base-border-color: gainsboro !default;
-  $base-line-height: 1.5em !default;
-  //////////////////////////////////////////////////////////////////////////////////
+// form.search-bar {
+//   position: relative;
 
-  $search-bar-border-color: $base-border-color;
-  $search-bar-border: 1px solid $search-bar-border-color;
-  $search-bar-background: lighten($search-bar-border-color, 10%);
+//   input[type=search] {
+//     appearance: none;
+//     background-color: $white;
+//     border: $base-border;
+//     box-sizing: border-box;
+//     display: block;
+//     font-size: 1em;
+//     font-style: italic;
+//     margin: 0;
+//     padding: (1.5em / 3) (1.5em / 3);
+//     position: relative;
+//     transition: border-color;
+//     width: 100%;
+//   }
 
-  position: relative;
+//   button[type=submit] {
+//     @include position(absolute, 0 0 0 null);
+//     outline: none;
+//     padding: 5px 10px;
 
-  input[type=search] {
-    appearance: none;
-    background-color: white;
-    border: 1px solid $base-border-color;
-    box-sizing: border-box;
-    display: block;
-    font-size: 1em;
-    font-style: italic;
-    margin: 0;
-    padding: ($base-spacing / 3) ($base-spacing / 3);
-    position: relative;
-    transition: border-color;
-    width: 100%;
-  }
-
-  button[type=submit] {
-    @include position(absolute, 0 0 0 null);
-    outline: none;
-    padding: 5px 10px;
-
-    img {
-      height: 12px;
-      opacity: 0.7;
-    }
-  }
-}
+//     img,
+//     i {
+//       height: 12px;
+//       opacity: 0.7;
+//     }
+//   }
+// }
 
