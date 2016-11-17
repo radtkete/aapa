@@ -134,6 +134,10 @@ body {
 
 
 
+
+
+
+
 .col-button-3 {
   @include media($large-screen) {
     @include span-columns(3);
@@ -184,4 +188,60 @@ body {
   }
 }
 
+
+
+
+
+
+
+
+
+.dropdown-list {
+  padding-top: 25px;
+}
+
+.mega-menu-link-lg {
+  color: #003C69;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: $font-weight--medium;
+  > a {
+    color: #003C69;
+  }
+}
+
+.mega-menu-headline-sm {
+  color: #4A4A4A;
+  font-weight: $font-weight--medium;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.mega-menu-link-sm a {
+  color: #4A4A4A;
+  font-weight: $font-weight--regular;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+li.divider {
+    height: 2px;
+    margin: 25px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+
+
+
+.roww {
+  @include row();
+}
+
+
+.col-sm-3 {
+  @include span-columns(3);
+}
 

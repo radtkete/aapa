@@ -34,6 +34,12 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+
 $(document).ready(function() {
  
   $(".fullwidth-slider").owlCarousel({

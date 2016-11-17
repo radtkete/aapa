@@ -1887,6 +1887,65 @@ body {
   margin-bottom: 5px;
 }
 
+.dropdown-list {
+  padding-top: 25px;
+}
+
+.mega-menu-link-lg {
+  color: #003C69;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.mega-menu-link-lg > a {
+  color: #003C69;
+}
+
+.mega-menu-headline-sm {
+  color: #4A4A4A;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.mega-menu-link-sm a {
+  color: #4A4A4A;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+li.divider {
+  height: 2px;
+  margin: 25px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.roww {
+  display: block;
+}
+
+.roww::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.col-sm-3 {
+  float: left;
+  display: block;
+  margin-right: 2.3576520234%;
+  width: 23.2317609825%;
+}
+
+.col-sm-3:last-child {
+  margin-right: 0;
+}
+
 @font-face {
   font-family: 'Benton Sans';
   src: url("../fonts/benton-thin.otf");
