@@ -52,11 +52,7 @@ hr {
   background-color: $base-border-color;
 }
 
-.headline-margin {
-  font-size: 22px;
-  font-weight: $font-weight--medium;
-}
-
+.headline-margin,
 .headline-main {
   font-size: 22px;
   font-weight: $font-weight--medium;
@@ -213,8 +209,8 @@ hr {
       padding: 0 20px;
       transition: background-color 150ms ease;
       user-select: none;
-      -webkit-appearance: button;
-      -webkit-font-smoothing: antialiased;
+      // -webkit-appearance: button;
+      // -webkit-font-smoothing: antialiased;
 
       &:hover,
       &:focus {
@@ -241,6 +237,62 @@ hr {
     margin-bottom: 25px;
   }
 }
+
+
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: lighten($base-border-color, 10%);
+  border: $base-border;
+  border-radius: $base-border-radius;
+  box-shadow: 0 2px 4px darken($white, 10%);
+  cursor: pointer;
+  flex-basis: 15em;
+  flex-grow: 1;
+  margin: 0 1em $base-spacing 1em;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+
+  .card-image {
+    background-color: $color-secondary;
+    max-height: 220px;
+    height: auto;
+    overflow: hidden;
+
+    img {
+      @include border-top-radius($base-border-radius);
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+
+    img {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    background-color: lighten($base-border-color, 10%);
+
+    .card-header {
+      background-color: lighten($base-border-color, 10%);
+    }
+  }
+}
+
 
 
 
@@ -272,6 +324,22 @@ hr {
 }
 
 
+
+
+.text-block-sm_bg {
+  @extend %section-padding;
+  background: #007A87;
+  border: $base-border;
+
+  .text-block-sm_headline {
+    color: $snow;
+  }
+
+  .text-block-sm_author {
+    color: $medium-gray;
+  }
+
+}
 
 
 
