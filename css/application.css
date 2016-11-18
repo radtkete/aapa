@@ -1218,7 +1218,7 @@ header.navigation nav {
   }
 }
 
-header.navigation ul.navigation-menu {
+header.navigation .navigation-menu {
   background-color: #003c69;
   clear: both;
   display: none;
@@ -1229,19 +1229,19 @@ header.navigation ul.navigation-menu {
   z-index: 9999;
 }
 
-header.navigation ul.navigation-menu.show {
+header.navigation .navigation-menu.show {
   display: block;
 }
 
 @media screen and (min-width: 900px) {
-  header.navigation ul.navigation-menu {
+  header.navigation .navigation-menu {
     display: inline;
     margin: 0;
     padding: 0;
   }
 }
 
-header.navigation li.nav-link {
+header.navigation .nav-link {
   background: #003c69;
   display: block;
   line-height: 60px;
@@ -1250,10 +1250,11 @@ header.navigation li.nav-link {
   text-align: right;
   width: 100%;
   z-index: 9999;
+  position: relative;
 }
 
 @media screen and (min-width: 900px) {
-  header.navigation li.nav-link {
+  header.navigation .nav-link {
     background: transparent;
     display: inline;
     line-height: 60px;
@@ -1262,22 +1263,34 @@ header.navigation li.nav-link {
   }
 }
 
-header.navigation li.nav-link a {
+header.navigation .nav-link a {
   color: rgba(255, 255, 255, 0.5);
   display: inline-block;
   text-decoration: none;
 }
 
 @media screen and (min-width: 900px) {
-  header.navigation li.nav-link a {
+  header.navigation .nav-link a {
     padding-right: 1em;
   }
-  header.navigation li.nav-link a:last-child {
+  header.navigation .nav-link a.active:before {
+    content: "";
+    border-bottom: 15px solid #EAEEEF;
+    border-right: 17px solid transparent;
+    border-left: 17px solid transparent;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    width: 34px;
+    margin-left: -17px;
+    z-index: 10;
+  }
+  header.navigation .nav-link a:last-child {
     padding-right: 0;
   }
 }
 
-header.navigation li.nav-link a:focus, header.navigation li.nav-link a:hover, header.navigation li.nav-link a.active {
+header.navigation .nav-link a:focus, header.navigation .nav-link a:hover, header.navigation .nav-link a.active {
   color: white;
 }
 
@@ -1887,6 +1900,76 @@ body {
   margin-bottom: 5px;
 }
 
+.mega-menu-hide {
+  display: none;
+}
+
+.mega-menu {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  background: #EAEEEF;
+  border: 1px solid #DDDDDD;
+  border-top: 0;
+  z-index: 999000;
+  padding: 40px 0;
+}
+
+.mega-menu .col-sm-3 {
+  min-height: 400px;
+  border-right: 2px solid #D9D9D9;
+  padding-right: 2.3576520234%;
+}
+
+.mega-menu .col-sm-3:last-child {
+  border-right: transparent;
+}
+
+.mega-menu .dropdown-list {
+  padding-top: 25px;
+}
+
+.mega-menu .mega-menu-link-lg {
+  color: #003C69;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.mega-menu .mega-menu-link-lg > a {
+  color: #003C69 !important;
+}
+
+.mega-menu .mega-menu-headline-sm {
+  color: #4A4A4A;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.mega-menu .mega-menu-link-sm a {
+  color: #4A4A4A;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.mega-menu li.divider {
+  height: 2px;
+  margin: 25px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.mega-menu-on {
+  background: #EAEEEF;
+  display: block;
+}
+
 .dropdown-list {
   padding-top: 25px;
 }
@@ -1899,7 +1982,7 @@ body {
 }
 
 .mega-menu-link-lg > a {
-  color: #003C69;
+  color: #003C69 !important;
 }
 
 .mega-menu-headline-sm {
@@ -1923,6 +2006,30 @@ li.divider {
   margin: 25px 0;
   overflow: hidden;
   background-color: #e5e5e5;
+}
+
+.dropdown-zenu {
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #EAEEEF;
+  border-color: rgba(0, 0, 0, 0.14902);
+  border-image: initial;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
+  float: left;
+  font-size: 14px;
+  left: 0px;
+  list-style: none;
+  margin: 2px 0px 0px;
+  min-width: 160px;
+  padding: 5px 0px;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
 }
 
 .roww {

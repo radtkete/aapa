@@ -32,7 +32,12 @@ $(document).ready(function() {
 }); 
 
 
-
+$(document).ready(function() {
+  $('.nav-link-more').on('click', function() {
+    $(this).toggleClass('active');
+    $('.mega-menu-hide').toggleClass('mega-menu');
+  })
+});
 
 
 
