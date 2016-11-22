@@ -130,9 +130,6 @@ header.navigation {
     padding-right: 0.8em;
     text-align: right;
     width: 100%;
-    z-index: 9999;
-
-    position: relative;
 
     @include media ($large-screen) {
       background: transparent;
@@ -161,7 +158,6 @@ header.navigation {
             left: 50%;
             width: 34px;
             margin-left: -17px;
-            z-index: 10;
           }
         }
 

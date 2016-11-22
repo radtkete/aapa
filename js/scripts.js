@@ -70,6 +70,22 @@ $('.js-accordion-trigger').bind('click', function(e){
 
 
 
+$('.sub-nav-box').bind('click', function(e){
+  $( ".sub-nav-footer" ).slideToggle( "slow", function() {
+    // Animation complete.
+  });
+  $(this).toggleClass('active');
+  $(this).find('.fa-plus').toggleClass("fa-minus");
+  e.preventDefault();
+});
+
+
+
+
+
+
+
+
 
 
       var pageSection = $(".home-section, .page-section, .small-section, .split-section");

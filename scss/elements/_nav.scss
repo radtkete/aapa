@@ -7,40 +7,62 @@
 
 // Sub Nav - Boxes
 
-.flex-grid {
-  $grid-gutter: 0.1rem;
-
-  display: none;
-
-  @include media($large-screen) {
+.sub-nav-boxes {
+    @include clearfix;
     display: flex;
     flex-flow: row wrap;
-    // margin: 0 - $grid-gutter;
-    border-bottom: $base-border;
-  }
 
-  .grid-box-wrap {
-    flex-basis: 20%;
-    flex-grow: 1;
-    flex-shrink: 0;
+  .sub-nav-box {
+    background: $white;
+    border-bottom: 1px solid transparentize($base-font-color, 0.8);
+    border-right: 1px solid transparentize($base-font-color, 0.8);
+    cursor: pointer;
+    outline: none;
     overflow: hidden;
-    // padding: 0 $grid-gutter ($grid-gutter * 2);
-    border-right: $base-border;
+    padding: 25px 20px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    position: relative;
+    z-index: 8;
 
-    &:last-child {
-      border-right: 0;
+    @include media($large-screen) {
+      flex-basis: 20%;
+      flex-grow: 1;
+      flex-shrink: 0;
+
+
+        &.active {
+          border-bottom: 1px solid #EAEEEF;
+          &:before {
+            content: "";
+            border-bottom: 15px solid #EAEEEF;
+            border-right: 17px solid transparent;
+            border-left: 17px solid transparent;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 34px;
+            margin-left: -17px;
+            z-index: 10;
+          }
+        }
+
     }
-
 
     .author {
       @extend .job-title;
       text-transform: uppercase;
     }
-  }
 
-  .grid-box {
-    background: $white;
-    padding: 25px 20px; 
+    .fa-plus {
+      color: $base-font-color;
+    }
+
+    &:focus,
+    &:hover {
+      background: transparentize($dark-gray, 0.95);
+    }
   }
 }
 

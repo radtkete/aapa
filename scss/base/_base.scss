@@ -126,7 +126,7 @@ body {
 
 .huro {
   align-items: center;
-  background: url("../img/CHLM%20Photos/iStock_000055230672_XXXLarge.jpg");
+  background: url("../img/CHLM%20Photos/iStock_000055230672.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -214,6 +214,68 @@ body {
     @include reset-display;
     @include pad();
     text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+.sub-nav-footer-on {
+  background: #EAEEEF;
+  display: block;
+}
+
+.sub-nav-footer {
+  @include clearfix;
+  background: #EAEEEF;
+  width: 100%;
+  display: none;
+  border: $base-border;
+  border-top: 0;
+
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    @include media($large-screen) {
+      // float: left;
+      text-align: center;
+    }
+
+    li {
+      line-height: 1.5em;
+      padding-right: 1em;
+
+      @include media($large-screen) {
+        display: inline;
+        text-align: left;
+
+        background: transparent;
+        display: inline;
+        line-height: 60px;
+        text-decoration: none;
+        width: auto;
+
+        overflow: hidden;
+        padding-right: 0.8em;
+
+        a {
+          display: inline-block;
+          color: #7B7B7B;
+          font-size: 14px;
+          line-height: 1;
+          &:hover {
+            color: #007A87;
+          }
+        }
+
+      }
+    }
   }
 }
 

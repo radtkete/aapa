@@ -736,14 +736,14 @@ hr {
 /* ==============================
   13px
   ============================== */
-.job-title, .flex-grid .grid-box-wrap .author,
+.job-title, .sub-nav-boxes .sub-nav-box .author,
 .job-location,
 .card-colors .color-info p {
   font-size: 0.8125em;
   color: #888888;
 }
 
-.job-title, .flex-grid .grid-box-wrap .author {
+.job-title, .sub-nav-boxes .sub-nav-box .author {
   font-weight: 500;
 }
 
@@ -959,37 +959,65 @@ hr {
 /* ==============================
   Navigation
   ============================== */
-.flex-grid {
-  display: none;
+.sub-nav-boxes {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.sub-nav-boxes::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.sub-nav-boxes .sub-nav-box {
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(74, 74, 74, 0.2);
+  border-right: 1px solid rgba(74, 74, 74, 0.2);
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  padding: 25px 20px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  position: relative;
+  z-index: 8;
 }
 
 @media screen and (min-width: 900px) {
-  .flex-grid {
-    display: flex;
-    flex-flow: row wrap;
-    border-bottom: 1px solid #E8E8E8;
+  .sub-nav-boxes .sub-nav-box {
+    flex-basis: 20%;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+  .sub-nav-boxes .sub-nav-box.active {
+    border-bottom: 1px solid #EAEEEF;
+  }
+  .sub-nav-boxes .sub-nav-box.active:before {
+    content: "";
+    border-bottom: 15px solid #EAEEEF;
+    border-right: 17px solid transparent;
+    border-left: 17px solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 34px;
+    margin-left: -17px;
+    z-index: 10;
   }
 }
 
-.flex-grid .grid-box-wrap {
-  flex-basis: 20%;
-  flex-grow: 1;
-  flex-shrink: 0;
-  overflow: hidden;
-  border-right: 1px solid #E8E8E8;
-}
-
-.flex-grid .grid-box-wrap:last-child {
-  border-right: 0;
-}
-
-.flex-grid .grid-box-wrap .author {
+.sub-nav-boxes .sub-nav-box .author {
   text-transform: uppercase;
 }
 
-.flex-grid .grid-box {
-  background: #FFFFFF;
-  padding: 25px 20px;
+.sub-nav-boxes .sub-nav-box .fa-plus {
+  color: #4A4A4A;
+}
+
+.sub-nav-boxes .sub-nav-box:focus, .sub-nav-boxes .sub-nav-box:hover {
+  background: rgba(136, 136, 136, 0.05);
 }
 
 .breadcrumb {
@@ -1196,8 +1224,6 @@ header.navigation .nav-link {
   padding-right: 0.8em;
   text-align: right;
   width: 100%;
-  z-index: 9999;
-  position: relative;
 }
 
 @media screen and (min-width: 900px) {
@@ -1230,7 +1256,6 @@ header.navigation .nav-link a {
     left: 50%;
     width: 34px;
     margin-left: -17px;
-    z-index: 10;
   }
   header.navigation .nav-link a:last-child {
     padding-right: 0;
@@ -2043,7 +2068,7 @@ body {
 
 .huro {
   align-items: center;
-  background: url("../img/CHLM%20Photos/iStock_000055230672_XXXLarge.jpg");
+  background: url("../img/CHLM%20Photos/iStock_000055230672.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -2125,6 +2150,65 @@ body {
   width: 8.3333333333%;
   padding: 2.3576520234%;
   text-align: center;
+}
+
+.sub-nav-footer-on {
+  background: #EAEEEF;
+  display: block;
+}
+
+.sub-nav-footer {
+  background: #EAEEEF;
+  width: 100%;
+  display: none;
+  border: 1px solid #E8E8E8;
+  border-top: 0;
+}
+
+.sub-nav-footer::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.sub-nav-footer ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 900px) {
+  .sub-nav-footer ul {
+    text-align: center;
+  }
+}
+
+.sub-nav-footer ul li {
+  line-height: 1.5em;
+  padding-right: 1em;
+}
+
+@media screen and (min-width: 900px) {
+  .sub-nav-footer ul li {
+    display: inline;
+    text-align: left;
+    background: transparent;
+    display: inline;
+    line-height: 60px;
+    text-decoration: none;
+    width: auto;
+    overflow: hidden;
+    padding-right: 0.8em;
+  }
+  .sub-nav-footer ul li a {
+    display: inline-block;
+    color: #7B7B7B;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .sub-nav-footer ul li a:hover {
+    color: #007A87;
+  }
 }
 
 @font-face {
