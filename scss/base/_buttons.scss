@@ -1,51 +1,49 @@
 #{$all-buttons},
 .btn {
-  // appearance: none;
-  // background-color: $action-color;
-  // border: 0;
-  // border-radius: $base-border-radius;
-  // color: #fff;
-  // cursor: pointer;
-  // display: inline-block;
-  // font-family: $base-font-family;
-  // font-size: $base-font-size;
-  // -webkit-font-smoothing: antialiased;
-  // font-weight: 600;
-  // line-height: 1;
-  // padding: $small-spacing $base-spacing;
-  // text-align: center;
-  // text-decoration: none;
-  // transition: background-color $base-duration $base-timing;
-  // user-select: none;
-  // vertical-align: middle;
-  // white-space: nowrap;
-
-  // appearance: none;
+  background-image: none;
   background-color: $action-color;
-  // border: 0;
-  border-radius: $base-border-radius;
-  color: #fff;
+  border: 2px solid transparent;
+  color: $white;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
-  // font-size: $base-font-size;
-  -webkit-font-smoothing: antialiased;
-  // font-weight: 600;
+  font-size: 14px;
+  font-weight: $font-weight--medium;
   line-height: 1;
   padding: $small-spacing $base-spacing;
   text-align: center;
   text-decoration: none;
-  transition: background-color $base-duration $base-timing;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
 
-  font-size: 14px;
-  font-weight: $font-weight--medium;
-  border: 2px solid transparent;
+  -webkit-font-smoothing: antialiased;
+
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  -webkit-border-radius: $base-border-radius;
+  -moz-border-radius: $base-border-radius;
+  border-radius: $base-border-radius;
+
+  -webkit-transition: background-color $base-duration $base-timing;  
+  -moz-transition: background-color $base-duration $base-timing; 
+  -o-transition: background-color $base-duration $base-timing;
+  -ms-transition: background-color $base-duration $base-timing; 
+  transition: background-color $base-duration $base-timing;
 
   &:hover,
   &:focus {
@@ -53,10 +51,15 @@
     color: rgba($white, .85);
     text-decoration: none;
     outline: none;
-    border-color: transparent;    
+    border-color: transparent;  
+
     -webkit-box-shadow: none;
     box-shadow: none;
+  }
 
+  &:active{
+    cursor: pointer !important;
+    outline: none !important;
   }
 
   &:disabled {
@@ -130,16 +133,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
+// Button Icon
 
 .btn-icon{
   position: relative;
@@ -184,12 +178,14 @@
 }
 
 
+// Button Sizes
 
 .btn-small {
   height: auto;
   padding: 6px 17px;
   font-size: 11px;
-} 
+}
+
 .btn-large {
   height: auto;
   padding-left: 45px;
@@ -198,104 +194,4 @@
 
 .btn-full {
   width: 100%;
-}
-
-
-
-
-
-
-
-.mb-10 {
-  margin-bottom: 10px;
-}
-
-
-.buttons-section-title {
-  font-size: 30px;
-  font-weight: 300;
-  text-transform: uppercase;
-  margin-bottom: 70px; 
-  color: #fff;
-}
-
-
-
-
-
-
-
-
-.btn-mod,
-a.btn-mod{
-  display: inline-block;
-  margin-bottom: 0;
-  text-align: center;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  line-height: 1.42857143;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-
-
-
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 4px 13px;
-  color: #fff;
-  background: rgba(34,34,34, .9);
-  border: 2px solid transparent;
-  font-size: 11px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 2px;
-
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-
-  -webkit-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);  
-  -moz-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
-  -o-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -ms-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
-  transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-}
-.btn-mod:hover,
-.btn-mod:focus,
-a.btn-mod:hover,
-a.btn-mod:focus{
-  font-weight: 400;
-  color: rgba(255,255,255, .85);
-  background: rgba(0,0,0, .7);
-  text-decoration: none;
-  outline: none;
-  border-color: transparent;    
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.btn-mod:active{
-  cursor: pointer !important;
-  outline: none !important;
-}
-
-
-
-
-.col-md-3 {
-  @include span-columns(3);
 }

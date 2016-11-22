@@ -2,18 +2,7 @@ $(window).resize(function() {
   var more = document.getElementById("js-navigation-more");
   if ($(more).length > 0) {
     var windowWidth = $(window).width();
-    var moreLeftSideToPageLeftSide = $(more).offset().left;
-    var moreLeftSideToPageRightSide = windowWidth - moreLeftSideToPageLeftSide;
-
-    if (moreLeftSideToPageRightSide < 330) {
-      $("#js-navigation-more .submenu .submenu").removeClass("fly-out-right");
-      $("#js-navigation-more .submenu .submenu").addClass("fly-out-left");
-    }
-
-    if (moreLeftSideToPageRightSide > 330) {
-      $("#js-navigation-more .submenu .submenu").removeClass("fly-out-left");
-      $("#js-navigation-more .submenu .submenu").addClass("fly-out-right");
-    }
+ 
   }
 });
 
@@ -32,15 +21,23 @@ $(document).ready(function() {
 }); 
 
 
+// $(document).ready(function() {
+//   $('.nav-link-more').on('click', function() {
+//     $(this).toggleClass('active');
+//     $('.mega-menu-hide').toggleClass('mega-menu');
+//   })
+// });
+
+
+
 $(document).ready(function() {
-  $('.nav-link-more').on('click', function() {
+  $( ".nav-link-more" ).click(function() {
     $(this).toggleClass('active');
-    $('.mega-menu-hide').toggleClass('mega-menu');
-  })
+    $( ".mega-menu" ).slideToggle( "slow", function() {
+      // Animation complete.
+    });
+  });
 });
-
-
-
 
 
 
@@ -60,6 +57,16 @@ $(document).ready(function() {
   $('.expander-trigger').click(function(){
     $(this).toggleClass("expander-hidden");
   });
+
+
+
+$('.js-accordion-trigger').bind('click', function(e){
+  jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
+  jQuery(this).parent().toggleClass('is-expanded');
+  jQuery(this).find('.fa-plus').toggleClass("fa-minus");
+  e.preventDefault();
+});
+
 
 
 

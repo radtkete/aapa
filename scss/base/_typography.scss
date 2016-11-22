@@ -25,7 +25,7 @@ p {
 a {
   color: $action-color;
   text-decoration: none;
-  transition: color $base-duration $base-timing;
+  @include transition(color $base-duration $base-timing);
 
   &:active,
   &:focus,
@@ -45,16 +45,23 @@ hr {
 
 %section-padding,
 .section-padding {
-  padding: 35px 28px;
+  @include padding(35px 28px);
 }
 
 .bg-gray {
   background-color: $base-border-color;
 }
 
+
+.headline-slider {
+  font-size: em(26px);
+  font-weight: $font-weight--medium;
+  color: $color-secondary;
+}
+
 .headline-margin,
 .headline-main {
-  font-size: 22px;
+  font-size: em(22px);
   font-weight: $font-weight--medium;
 }
 
@@ -72,7 +79,7 @@ hr {
 
 .headline-standard {
   color: $teal;
-  font-size: 16px;
+  font-size: em(16px);
   font-weight: $font-weight--medium;
 
   &.upper-case {
@@ -88,7 +95,7 @@ hr {
   ============================== */
 
 .text-block-sm_body {
-  font-size: 15px;
+  font-size: em(15px);
   line-height: 25px;
 }
 
@@ -101,7 +108,7 @@ hr {
 .text-author,
 .text-block-sm_author {
   color: $dark-gray;
-  font-size: 14px;
+  font-size: em(14px);
   font-weight: $font-weight--bold;
   line-height: 1;
   margin-bottom: 18px;
@@ -115,7 +122,7 @@ hr {
 
 .job-title,
 .job-location {
-  font-size: 13px;
+  font-size: em(13px);
   color: $taupe-gray;
 }
 
@@ -135,7 +142,7 @@ hr {
 
 .text-block-sm_desc {
   color: $medium-gray;
-  font-size: 12px;
+  font-size: em(12px);
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 18px;
@@ -182,16 +189,15 @@ hr {
 }
 
 .job-footer {
-  border: transparent;
-  height: 60px;
+  @include clearfix;
+  @include size(100% 60px);
   line-height: 60px;
-  width: 100%;
 
   .link {
     float: left;
     margin-left: 1em;
     display: inline;
-    font-size: 14px;
+    font-size: em(14px);
   }
 
   .arrow-nav {
@@ -199,99 +205,19 @@ hr {
     margin-top: 0;
     
     a {
-      background-color: #19A8B8;
+      @extend .btn;
+      @include padding(0 20px);
+      @include margin(0 0 0 1px);
+      font-size: em(30);
       border: transparent;
-      color: #fff;
-      cursor: pointer;
       float: left;
-      font-size: 30px;
-      margin: 0 0 0 1px;
-      padding: 0 20px;
-      transition: background-color 150ms ease;
-      user-select: none;
-      // -webkit-appearance: button;
-      // -webkit-font-smoothing: antialiased;
-
-      &:hover,
-      &:focus {
-        background: #148693;
-        color: #fff;
-        cursor: pointer;
-      }
+      line-height: unset;
+      border-radius: 0;
     }
   }
 }
 
 
-
-
-
-
-
-
-
-
-.related-content-list {
-  padding: 25px 20px;
-  > li {
-    margin-bottom: 25px;
-  }
-}
-
-
-
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.card {
-  background-color: lighten($base-border-color, 10%);
-  border: $base-border;
-  border-radius: $base-border-radius;
-  box-shadow: 0 2px 4px darken($white, 10%);
-  cursor: pointer;
-  flex-basis: 15em;
-  flex-grow: 1;
-  margin: 0 1em $base-spacing 1em;
-  position: relative;
-  transition: all 0.2s ease-in-out;
-
-  .card-image {
-    background-color: $color-secondary;
-    max-height: 220px;
-    height: auto;
-    overflow: hidden;
-
-    img {
-      @include border-top-radius($base-border-radius);
-      opacity: 1;
-      transition: all 0.2s ease-in-out;
-      max-width: 100%;
-      height: auto;
-    }
-  }
-
-
-  &:focus,
-  &:hover {
-    cursor: pointer;
-
-    img {
-      opacity: 0.7;
-    }
-  }
-
-  &:active {
-    background-color: lighten($base-border-color, 10%);
-
-    .card-header {
-      background-color: lighten($base-border-color, 10%);
-    }
-  }
-}
 
 
 
@@ -314,10 +240,7 @@ hr {
     color: $dark-gray;
   }
 
-  .text-block-sm_headline {
-    font-weight: $font-weight--regular;
-  }
-
+  .text-block-sm_headline,
   .text-block-sm_author {
     font-weight: $font-weight--regular;
   }
@@ -328,7 +251,7 @@ hr {
 
 .text-block-sm_bg {
   @extend %section-padding;
-  background: #007A87;
+  background: $teal;
   border: $base-border;
 
   .text-block-sm_headline {
@@ -355,163 +278,9 @@ hr {
 
 .text-block-group-pseduo > div:nth-child(2),
 .text-block-group-pseduo > div:nth-child(3) {
-  border-left: 1px dashed #DDDDDD;
+  border-left: 1px dashed $light-gray;
 }
 
-
-
-
-
-
-
-
-.side-image {
-  $base-line-height: 1.5em !default;
-  $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $large-screen: 53.75em !default;
-
-  $side-image-background-top: #B5EBEB;
-  $side-image-background-bottom: #5DAC5D;
-  $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
-
-  background: $teal;
-  color: $white;
-
-  @include media($large-screen) {
-    @include row(table);
-  }
-
-  // .btn {
-  //   background-color: $white;
-  //   border: 0;
-  //   border-radius: 3px;
-  //   color: $teal;
-  //   cursor: pointer;
-  //   display: inline-block;
-  //   font-family: "Benton Sans", Arial, sans-serif;
-  //   font-size: 1em;
-  //   -webkit-font-smoothing: antialiased;
-  //   font-weight: 600;
-  //   line-height: 1;
-  //   padding: 0.75em 1.5em;
-  //   text-align: center;
-  //   text-decoration: none;
-  //   transition: background-color 150ms ease;
-  //   user-select: none;
-  //   vertical-align: middle;
-  //   white-space: nowrap;
-  // }
-
-  .images-wrapper {
-    background: url("../img/pdf_placeholder.jpg");
-    background-color: $teal;
-    background-size: contain;
-    display: block;
-    // min-height: 12em;
-    min-height: 446px;
-    padding: 3em;
-    position: relative;
-
-    @include media($large-screen) {
-      @include span-columns(4);
-      width: auto;
-      background-position: bottom left;
-
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  }
-
-  .side-image-content {
-    @include span-columns(12);
-    padding: 1em 1em 4em 1em;
-
-    @include media($large-screen) {
-      @include span-columns(8);
-      width: 72%;
-      padding: 4em 4em 8em 4em;
-    }
-
-    h1 {
-      font-size: 22px;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 20px;
-    }
-  }
-
-  @include reset-display();
-}
-
-
-.arrow-left {
-  width: 0; 
-  height: 0; 
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent; 
-  
-  border-right:40px solid $teal; 
-
-  position: absolute;
-  right: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.expander {
-  width: 25em;
-
-  .expander-trigger {
-    display: block;
-
-    &:before {
-      content: "\25BC";
-      margin-right: 0.5em;
-    }
-  }
-
-  .expander-hidden {
-    &:before {
-      content: "\25BA";
-    }
-  }
-
-  .expander-hidden + .expander-content {
-    display: none;
-  }
-}
 
 
 

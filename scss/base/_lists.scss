@@ -17,3 +17,80 @@ dt {
 dd {
   margin: 0;
 }
+
+
+// Custom Checkbox with Solid BG
+
+#custom-checkbox {
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    font-weight: $font-weight--regular;
+    line-height: 36px;
+  }
+
+  input[type="checkbox"] + label:before {
+    border: $base-border;
+    content: "\00a0";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    // margin-right: $small-spacing / 2;
+    margin-right: 24px;
+    padding: 0;
+    vertical-align: middle;
+  }
+
+  input[type="checkbox"]:checked + label:before {
+    background: $action-color;
+    // content: "\2713";\
+    content: "\00a0";
+    text-align: center;
+  }
+
+  input[type="checkbox"]:checked + label:after {
+    // font-weight: bold;
+  }
+}
+
+
+
+// Expander
+
+.expander {
+  width: 25em;
+
+  .expander-trigger {
+    display: block;
+
+    &:before {
+      content: "\25BC";
+      margin-right: 0.5em;
+    }
+  }
+
+  .expander-hidden {
+    &:before {
+      content: "\25BA";
+    }
+  }
+
+  .expander-hidden + .expander-content {
+    display: none;
+  }
+}
+
+
+
+// Related Content List
+
+.related-content-list {
+  padding: 25px 20px;
+  > li {
+    margin-bottom: 25px;
+  }
+}
+

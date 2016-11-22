@@ -1,0 +1,95 @@
+/* ==============================
+  Color Pallete
+  ============================== */
+
+.card-colors {
+  border: $base-border;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 4px $light-gray;
+
+  @include media($large-screen) {
+    @include span-columns(3);
+    @include omega(4n);
+  }
+
+  @include media(min-width $medium-screen max-width $large-screen) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+  
+  .color-box {
+    height: 175px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .color-info {
+    padding: 25px 20px;
+    .headline-standard {
+      color: $base-font-color;
+      text-transform: uppercase;
+    }
+    p {
+      @extend .job-location;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+
+
+
+.col-button-3 {
+  @include media($large-screen) {
+    @include span-columns(3);
+    @include omega(4n);
+  }
+
+  @include media(min-width $medium-screen max-width $large-screen) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.template-section-title {
+  color:#19A8B8; 
+  margin-bottom: .75em;
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+// MARCA
+
+#marca8 {
+  @include span-columns(8);
+
+  .accordion-wrapper {
+    margin-bottom: 70px;
+  }
+
+  .text-block-sm {
+    margin-bottom: 40px;
+    @include span-columns(4 of 8);
+  }
+
+}
+
+
+#marca4 {
+  @include span-columns(4);
+
+  .job-source-feed {
+    margin-bottom: 40px;
+  }
+}
+

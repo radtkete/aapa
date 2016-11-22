@@ -7,3 +7,132 @@ picture {
   margin: 0;
   max-width: 100%;
 }
+
+
+
+
+
+// Side Image Content
+
+.side-image {
+
+  background: $teal;
+  color: $white;
+
+  @include media($large-screen) {
+    @include row(table);
+  }
+
+  .images-wrapper {
+    background: url("../img/pdf_placeholder.jpg");
+    background-color: $teal;
+    background-size: contain;
+    display: block;
+    // min-height: 12em;
+    min-height: 446px;
+    padding: 3em;
+    position: relative;
+
+    @include media($large-screen) {
+      @include span-columns(4);
+      width: auto;
+      background-position: bottom left;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .side-image-content {
+    @include span-columns(12);
+    padding: 1em 1em 4em 1em;
+
+    @include media($large-screen) {
+      @include span-columns(8);
+      width: 72%;
+      padding: 4em 4em 8em 4em;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+  }
+  @include reset-display();
+}
+
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right:40px solid $teal; 
+  position: absolute;
+  right: 0;
+}
+
+
+
+
+
+
+
+// Image Cards - Trio
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card {
+    background-color: lighten($base-border-color, 10%);
+    border: $base-border;
+    border-radius: $base-border-radius;
+    box-shadow: 0 2px 4px darken($white, 10%);
+    cursor: pointer;
+    flex-basis: 15em;
+    flex-grow: 1;
+    margin: 0 1em $base-spacing 1em;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+
+    .card-image {
+      background-color: $color-secondary;
+      max-height: 220px;
+      height: auto;
+      overflow: hidden;
+
+      img {
+        @include border-top-radius($base-border-radius);
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      border-radius: $base-border-radius;
+
+      img {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      background-color: lighten($base-border-color, 10%);
+
+      .card-header {
+        background-color: lighten($base-border-color, 10%);
+      }
+    }
+  }
+}
