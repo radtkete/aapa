@@ -781,7 +781,6 @@ hr {
 }
 
 .job-source-feed {
-  max-width: 390px;
   border: 1px solid #E8E8E8;
 }
 
@@ -961,9 +960,15 @@ hr {
   Navigation
   ============================== */
 .flex-grid {
-  display: flex;
-  flex-flow: row wrap;
-  border-bottom: 1px solid #E8E8E8;
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .flex-grid {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #E8E8E8;
+  }
 }
 
 .flex-grid .grid-box-wrap {
@@ -1706,11 +1711,57 @@ header.navigation .button-block .button-block-btn:last-child:hover, header.navig
   float: left;
   display: block;
   margin-right: 2.3576520234%;
-  width: 65.8807826589%;
+  width: 100%;
+  padding: 0 2.3576520234%;
 }
 
 #marca8:last-child {
   margin-right: 0;
+}
+
+#marca8 .text-block-sm {
+  float: left;
+  display: block;
+  margin-right: 2.3576520234%;
+  width: 100%;
+}
+
+#marca8 .text-block-sm:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 600px) {
+  #marca8 .text-block-sm {
+    float: left;
+    display: block;
+    margin-right: 2.3576520234%;
+    width: 48.8211739883%;
+  }
+  #marca8 .text-block-sm:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #marca8 {
+    float: left;
+    display: block;
+    margin-right: 2.3576520234%;
+    width: 65.8807826589%;
+    padding: 0;
+  }
+  #marca8:last-child {
+    margin-right: 0;
+  }
+  #marca8 .text-block-sm {
+    float: left;
+    display: block;
+    margin-right: 3.5786642602%;
+    width: 48.2106678699%;
+  }
+  #marca8 .text-block-sm:last-child {
+    margin-right: 0;
+  }
 }
 
 #marca8 .accordion-wrapper {
@@ -1719,25 +1770,46 @@ header.navigation .button-block .button-block-btn:last-child:hover, header.navig
 
 #marca8 .text-block-sm {
   margin-bottom: 40px;
-  float: left;
-  display: block;
-  margin-right: 3.5786642602%;
-  width: 48.2106678699%;
-}
-
-#marca8 .text-block-sm:last-child {
-  margin-right: 0;
 }
 
 #marca4 {
   float: left;
   display: block;
   margin-right: 2.3576520234%;
-  width: 31.7615653177%;
+  width: 100%;
+  padding: 0 2.3576520234%;
 }
 
 #marca4:last-child {
   margin-right: 0;
+}
+
+@media screen and (min-width: 800px) {
+  #marca4 .job-source-feed {
+    float: left;
+    display: block;
+    margin-right: 2.3576520234%;
+    width: 48.8211739883%;
+  }
+  #marca4 .job-source-feed:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #marca4 {
+    float: left;
+    display: block;
+    margin-right: 2.3576520234%;
+    width: 31.7615653177%;
+    padding: 0;
+  }
+  #marca4:last-child {
+    margin-right: 0;
+  }
+  #marca4 .job-source-feed {
+    width: 100%;
+  }
 }
 
 #marca4 .job-source-feed {

@@ -71,7 +71,28 @@
 // MARCA
 
 #marca8 {
-  @include span-columns(8);
+  @include span-columns(12);
+  @include pad(0 default);
+  .text-block-sm {
+    @include span-columns(12 of 12);
+  }
+
+  @include media($small-up) {
+    .text-block-sm {
+      @include span-columns(6 of 12);
+    }
+  }
+
+
+  @include media($large-up) {
+    @include span-columns(8);
+    @include pad(0);
+    .text-block-sm {
+      @include span-columns(4 of 8);
+    }
+  }
+
+
 
   .accordion-wrapper {
     margin-bottom: 70px;
@@ -79,14 +100,28 @@
 
   .text-block-sm {
     margin-bottom: 40px;
-    @include span-columns(4 of 8);
   }
-
 }
 
 
 #marca4 {
-  @include span-columns(4);
+  @include span-columns(12);
+  @include pad(0 default);
+
+
+  @include media($medium-up) {
+    .job-source-feed {
+      @include span-columns(6 of 12);
+    }
+  }
+
+  @include media($large-up) {
+    @include span-columns(4);
+    @include pad(0);
+    .job-source-feed {
+      @include fill-parent();
+    }
+  }
 
   .job-source-feed {
     margin-bottom: 40px;
