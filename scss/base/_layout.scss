@@ -21,18 +21,18 @@ body {
 
 
 .article {
-	display: table;
-	width: 100%;
-	padding: 40px 0;
+  @include display(table);
+  @include fill-parent;
+  @include padding(40px 0);
 
 	.article_image,
 	.article_content {
-		display: table-cell;
+		@include display(table-cell);
 		vertical-align: middle;
 	}
 
 	.article_image {
-		padding-right: $gutter;
+		@include padding(null $gutter null null);
 
 		img {
 			// height: 3em;
@@ -42,7 +42,7 @@ body {
 	}
 
 	.article_content {
-		width: 100%;
+		@include fill-parent;
 	}
 }
 
@@ -53,32 +53,31 @@ body {
 	============================== */
 
 .article-vert {
-  display: table;
-  width: 100%;
+  @include display(table);
+  @include fill-parent;
 
   .article-vert_image,
   .article-vert_content {
-    display: table-cell;
+    @include display(table-cell);
     vertical-align: top;
   }
 
   .article-vert_image {
-    padding-right: 1.4em;
+    @include padding(null $gutter null null);
 
     > img {
       display: block;
       max-width: none;
       // height: auto;
       // width: 187px;
-
       height: 100%;
       width: auto;
     }
   }
 
   .article-vert_content {
-    width: 100%;
-    padding-left: 1.4em;
+    @include fill-parent;
+    @include padding(null null null $gutter);
   }
 }
 

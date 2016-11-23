@@ -7,7 +7,7 @@
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
-  font-size: 14px;
+  font-size: em(14px);
   font-weight: $font-weight--medium;
   line-height: 1;
   padding: $small-spacing $base-spacing;
@@ -160,7 +160,7 @@
     top: 50%;
     left: 0;
     color: #777;
-    font-size: 48px;
+    font-size: em(48px);
     opacity: .2;
 
     -webkit-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);  
@@ -183,7 +183,7 @@
 .btn-small {
   height: auto;
   padding: 6px 17px;
-  font-size: 11px;
+  font-size: em(11px);
 }
 
 .btn-large {

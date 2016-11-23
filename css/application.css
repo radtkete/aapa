@@ -16,7 +16,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"],
   cursor: pointer;
   display: inline-block;
   font-family: "Benton Sans", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875em;
   font-weight: 500;
   line-height: 1;
   padding: 0.75em 1.5em;
@@ -156,7 +156,7 @@ button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:
   top: 50%;
   left: 0;
   color: #777;
-  font-size: 48px;
+  font-size: 3em;
   opacity: .2;
   -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   -moz-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
@@ -176,7 +176,7 @@ button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:
 .btn-small {
   height: auto;
   padding: 6px 17px;
-  font-size: 11px;
+  font-size: 0.6875em;
 }
 
 .btn-large {
@@ -382,7 +382,7 @@ body {
 }
 
 .article-vert .article-vert_image {
-  padding-right: 1.4em;
+  padding-right: 1.618em;
 }
 
 .article-vert .article-vert_image > img {
@@ -394,7 +394,7 @@ body {
 
 .article-vert .article-vert_content {
   width: 100%;
-  padding-left: 1.4em;
+  padding-left: 1.618em;
 }
 
 ul,
@@ -885,6 +885,7 @@ hr {
   margin-right: 2.3576520234%;
   width: 65.8807826589%;
   margin-left: 17.0596086706%;
+  margin-right: 0;
   text-align: center;
 }
 
@@ -912,13 +913,10 @@ hr {
   font-size: 20px;
   line-height: 1;
   margin-bottom: 18px;
-  font-weight: 400;
 }
 
 .testimonial .position {
-  font-size: 16px;
   line-height: 1;
-  font-weight: 400;
 }
 
 .testimonial-icon {
@@ -972,7 +970,6 @@ hr {
 
 .sub-nav-boxes .sub-nav-box {
   background: #FFFFFF;
-  border-bottom: 1px solid rgba(74, 74, 74, 0.2);
   border-right: 1px solid rgba(74, 74, 74, 0.2);
   cursor: pointer;
   outline: none;
@@ -985,24 +982,26 @@ hr {
   z-index: 8;
 }
 
+.sub-nav-boxes .sub-nav-box:last-child {
+  border-right: 0;
+}
+
 @media screen and (min-width: 900px) {
   .sub-nav-boxes .sub-nav-box {
     flex-basis: 20%;
     flex-grow: 1;
     flex-shrink: 0;
   }
-  .sub-nav-boxes .sub-nav-box.active {
-    border-bottom: 1px solid #EAEEEF;
-  }
-  .sub-nav-boxes .sub-nav-box.active:before {
-    content: "";
-    border-bottom: 15px solid #EAEEEF;
-    border-right: 17px solid transparent;
+  .sub-nav-boxes .sub-nav-box.active:after {
+    height: 0;
+    width: 0;
+    border-bottom: 17px solid #EAEEEF;
     border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
     position: absolute;
     bottom: 0;
     left: 50%;
-    width: 34px;
+    content: "";
     margin-left: -17px;
     z-index: 10;
   }
@@ -1052,8 +1051,6 @@ hr {
 
 .pagination ul {
   display: inline;
-  margin: 0;
-  padding: 0;
   text-align: center;
 }
 
@@ -1369,6 +1366,66 @@ header.navigation .button-block .button-block-btn:last-child {
 header.navigation .button-block .button-block-btn:last-child:hover, header.navigation .button-block .button-block-btn:last-child:focus {
   background-color: #00626c;
   color: #FFFFFF;
+}
+
+/* ==============================
+  Sub-Nav Footer
+  ============================== */
+.sub-nav-footer-on {
+  background: #EAEEEF;
+  display: block;
+}
+
+.sub-nav-footer {
+  background: #EAEEEF;
+  width: 100%;
+  display: none;
+  border: 1px solid #E8E8E8;
+  border-top: 0;
+}
+
+.sub-nav-footer::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.sub-nav-footer ul {
+  display: block;
+}
+
+@media screen and (min-width: 900px) {
+  .sub-nav-footer ul {
+    text-align: center;
+  }
+}
+
+.sub-nav-footer ul li {
+  line-height: 1.5em;
+  padding-right: 1em;
+}
+
+@media screen and (min-width: 900px) {
+  .sub-nav-footer ul li {
+    display: inline;
+    text-align: left;
+    background: transparent;
+    display: inline;
+    line-height: 60px;
+    text-decoration: none;
+    width: auto;
+    overflow: hidden;
+    padding-right: 0.8em;
+  }
+  .sub-nav-footer ul li a {
+    display: inline-block;
+    color: #7B7B7B;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .sub-nav-footer ul li a:hover {
+    color: #007A87;
+  }
 }
 
 /* ==============================
@@ -2067,21 +2124,49 @@ body {
 }
 
 .huro {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
   align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
   background: url("../img/CHLM%20Photos/iStock_000055230672.jpg");
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
   min-height: 25em;
   padding: 2em;
 }
 
 @media screen and (min-width: 900px) {
   .huro {
-    background-position: left;
-    background-size: cover;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
     justify-content: flex-end;
+    -ms-flex-pack: end;
   }
 }
 
@@ -2150,65 +2235,6 @@ body {
   width: 8.3333333333%;
   padding: 2.3576520234%;
   text-align: center;
-}
-
-.sub-nav-footer-on {
-  background: #EAEEEF;
-  display: block;
-}
-
-.sub-nav-footer {
-  background: #EAEEEF;
-  width: 100%;
-  display: none;
-  border: 1px solid #E8E8E8;
-  border-top: 0;
-}
-
-.sub-nav-footer::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
-.sub-nav-footer ul {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-@media screen and (min-width: 900px) {
-  .sub-nav-footer ul {
-    text-align: center;
-  }
-}
-
-.sub-nav-footer ul li {
-  line-height: 1.5em;
-  padding-right: 1em;
-}
-
-@media screen and (min-width: 900px) {
-  .sub-nav-footer ul li {
-    display: inline;
-    text-align: left;
-    background: transparent;
-    display: inline;
-    line-height: 60px;
-    text-decoration: none;
-    width: auto;
-    overflow: hidden;
-    padding-right: 0.8em;
-  }
-  .sub-nav-footer ul li a {
-    display: inline-block;
-    color: #7B7B7B;
-    font-size: 14px;
-    line-height: 1;
-  }
-  .sub-nav-footer ul li a:hover {
-    color: #007A87;
-  }
 }
 
 @font-face {

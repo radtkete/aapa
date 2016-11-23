@@ -261,7 +261,6 @@ header.navigation {
     display: inline;
     line-height: $navigation-height;
     text-decoration: none;
-
   }
 
   .button-block-btn {
@@ -293,6 +292,67 @@ header.navigation {
 }
 
 
+
+
+
+
+
+/* ==============================
+  Sub-Nav Footer
+  ============================== */
+
+
+.sub-nav-footer-on {
+  background: #EAEEEF;
+  display: block;
+}
+
+.sub-nav-footer {
+  @include clearfix;
+  background: #EAEEEF;
+  width: 100%;
+  display: none;
+  border: $base-border;
+  border-top: 0;
+
+  ul {
+    display: block;
+    @include media($large-screen) {
+      // float: left;
+      text-align: center;
+    }
+
+    li {
+      line-height: 1.5em;
+      padding-right: 1em;
+
+      @include media($large-screen) {
+        display: inline;
+        text-align: left;
+
+        background: transparent;
+        display: inline;
+        line-height: 60px;
+        text-decoration: none;
+        width: auto;
+
+        overflow: hidden;
+        padding-right: 0.8em;
+
+        a {
+          display: inline-block;
+          color: #7B7B7B;
+          font-size: 14px;
+          line-height: 1;
+          &:hover {
+            color: #007A87;
+          }
+        }
+
+      }
+    }
+  }
+}
 
 
 

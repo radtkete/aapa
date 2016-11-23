@@ -31,6 +31,7 @@
 .col-md-88 {
   @include span-columns(8);
   @include shift(2);
+  @include omega();
   text-align: center;
 }
 
@@ -52,12 +53,9 @@
     font-size: 20px;
     line-height: 1;
     margin-bottom: 18px;
-    font-weight: $font-weight--regular;
   }
   .position {
-    font-size: 16px;
     line-height: 1;
-    font-weight: $font-weight--regular;
   }
 }
 
