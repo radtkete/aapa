@@ -2,46 +2,21 @@
   Testimonial Slider
   ============================== */
 
-.page-section,
-.small-section{
-  width: 100%;
-  display: block; 
-  position: relative;
-  overflow: hidden;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-
-  padding: 40px 0;
-}
-
-.bg-scroll{
+.fullwidth-slider {
   background-attachment: scroll !important;
 }
 
-.col-md-88 {
-  @include span-columns(8);
-  @include shift(2);
-  @include omega();
+.testimonial-wrapper {
+  @include outer-container(900px);
   text-align: center;
+  position: relative; 
 }
-
 
 .testimonial {
   margin: 0;
   padding: 0;
   background: none;
   border: none;
-  text-align: center;
   color: $snow;
   .body {
     font-size: 35px;
@@ -60,10 +35,13 @@
 }
 
 .testimonial-icon {
-  margin-bottom: 7px;
+  margin: 0 auto 7px auto;
   text-align: center;
   font-size: 32px;
   color: $snow;
+  > img {
+    max-width: 50px;
+  }
 }
 
 .owl-carousel {
@@ -79,7 +57,6 @@
   -moz-radius: 0;
   margin: -23px 0 0 0; // Half of the prev/next buttons height here in negatives to center them perfectly
 }
-
 
 .owl-prev,
 .owl-next {

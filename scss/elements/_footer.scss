@@ -5,23 +5,34 @@
 #footer-blue {
   background: $color-primary;
   color: $white;
-  border-top: 6px solid $prussian-blue;
-  border-bottom: 6px solid $prussian-blue;
+  border-top: 9px solid $prussian-blue;
+  border-bottom: 9px solid $prussian-blue;
+
+  p {
+    display: block;
+    font-size: 14px;
+    line-height: 27px;
+  }
+
+  .footer-logo {
+    margin-bottom: 27px;
+  }
 
 
-.col-lg-9 {
-  @include span-columns(8);
+.grid-span-7 {
+  @include span-columns(7);
+}
+
+.grid-span-4 {
+  @include span-columns(4);
   @include shift(1);
-  @include omega();
 }
 
-.col-lg-3 {
-  @include span-columns(3);
+.grid-span-4x2 {
+  @include span-columns(4);
+  @include shift(2);
 }
 
-.col-lg-3-9 {
-  @include span-columns(1 of 3);
-}
 
 a {
   color: transparentize($white, 0.35);
@@ -36,24 +47,31 @@ a {
   .footer-top {
     padding-top: 75px;
     padding-bottom: 50px;
-    border-bottom: 3px solid $prussian-blue;
+    border-bottom: 6px solid $prussian-blue;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 6px;
+      position: absolute;
+      left: 4.2152121503% * 8.5;
+      top: 0px;
+      background: $prussian-blue;
+    }
   }
 
   .footer-bottom {
     font-weight: $font-weight--regular;
     font-size: 14px;
+    margin: 25px auto;
     ul {
       display: block;
-      margin: 0;
-      padding-left: 0;
-      margin-top: 20px;
       margin-bottom: 15px;
 
       li {
         line-height: 1.5em;
         padding-right: 1em;
-
-
 
         @include media($large-screen) {
           display: inline;
@@ -63,7 +81,6 @@ a {
     }
   }
 }
-
 
 .hr-footer {
   width: 20px;

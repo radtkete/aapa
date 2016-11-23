@@ -25,6 +25,29 @@ body {
   margin: 0 0 ($base-spacing * 2);
 }
 
+
+.page-section,
+.small-section{
+  width: 100%;
+  display: block; 
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  padding: 40px 0;
+}
+
 .container {
   @include outer-container;
 }
@@ -47,78 +70,82 @@ body {
   margin-bottom: 40px;
 }
 
-.alpha {
-  @include span-columns(4);
-  // border: 1px solid red;
-}
-
-.beta {
-  @include span-columns(4);
-  // border: 1px solid blue;
-}
-
-.zeta {
-  @include span-columns(4);
-  // border: 1px solid green;
-}
-
-.col-md-7 {
-  @include span-columns(12);
-}
-
-.col-md-7 {
-  @include span-columns(8);
-}
-
-.col-md-8 {
-  @include span-columns(8);
-}
-
-.col-md-4 {
-  @include span-columns(4);
-}
-
-.col-md-4-offset {
-  @include span-columns(4);
-  @include shift(2);
-}
-
-.col-md-5 {
-  @include span-columns(4);
-}
-
-.col-md-6 {
-  @include span-columns(6);
-}
-
-
 .row {
   @include row;
 }
 
+.col-md-7 {
+  @include span-columns(24);
+}
+
+.col-md-12 {
+  @include span-columns(24);
+}
+
+
+.col-md-7 {
+  @include span-columns(16);
+}
+
+.col-md-8 {
+  @include span-columns(16);
+}
+
+
+.col-md-6 {
+  @include span-columns(12);
+}
+
+.alpha {
+  @include span-columns(8);
+  // border: 1px solid red;
+}
+
+.beta {
+  @include span-columns(8);
+  // border: 1px solid blue;
+}
+
+.zeta {
+  @include span-columns(8);
+  // border: 1px solid green;
+}
+
+.col-md-4 {
+  @include span-columns(8);
+}
+
+.col-md-4-offset {
+  @include span-columns(8);
+  @include shift(2);
+}
+
+.col-md-5 {
+  @include span-columns(8);
+}
+
+
+
+
 .col-md-3 {
-  @include span-columns(3);
+  @include span-columns(6);
 }
 
 .col-sm-3 {
-  @include span-columns(3);
+  @include span-columns(6);
 }
 
 .col-md-2 {
-  @include span-columns(2);
+  @include span-columns(4);
 }
 
 .col-md-2-omega {
-  @include span-columns(2);
+  @include span-columns(4);
   @include omega();
 }
 
 .col-md-push-1 {
-  @include shift(1);
-}
-
-.col-md-12 {
-  @include span-columns(12);
+  @include shift(2);
 }
 
 

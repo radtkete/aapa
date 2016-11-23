@@ -151,20 +151,9 @@ hr {
 
 
 
-.text-block-sm_sponsor {
-  @extend %section-padding;
-  background: $light-gray;
 
-  .text-block-sm_desc {
-    color: $dark-gray;
-  }
 
-  .text-block-sm_headline,
-  .text-block-sm_author {
-    font-weight: $font-weight--regular;
-  }
 
-}
 
 
 
@@ -183,36 +172,40 @@ hr {
   border-bottom: $base-border;
 }
 
+
+
+
+// JobSource Feed, Most Popular
+
 .job-source-feed {
-  // max-width: 390px;
   border: $base-border;
-}
-
-.job-footer {
-  @include clearfix;
-  @include size(100% 60px);
-  line-height: 60px;
-
-  .link {
-    float: left;
-    margin-left: 1em;
-    display: inline;
-    font-size: em(14px);
+  @include media($medium-up) {
+    @include span-columns(8);
   }
+  .job-footer {
+    @include clearfix;
+    @include size(100% 60px);
+    line-height: 60px;
 
-  .arrow-nav {
-    float: right;
-    margin-top: 0;
-    
-    a {
-      @extend .btn;
-      @include padding(0 20px);
-      @include margin(0 0 0 1px);
-      font-size: em(30);
-      border: transparent;
+    .job-footer-link {
       float: left;
-      line-height: unset;
-      border-radius: 0;
+      margin-left: $base-spacing;
+      display: inline;
+      font-size: em(14px);
+    }
+
+    .arrow-nav {
+      float: right;
+      .arrow-nav-btn {
+        @extend .btn;
+        @include padding(0 20px);
+        @include margin(0 0 0 1px);
+        font-size: em(30);
+        border: transparent;
+        float: left;
+        line-height: unset;
+        border-radius: 0;
+      }
     }
   }
 }
@@ -220,34 +213,20 @@ hr {
 
 
 
-
-
-
-
-
+// Small - Text Block
 
 .text-block-sm {
   @extend %section-padding;
   border: $base-border;
-}
-
-
-.text-block-sm_sponsor {
-  @extend %section-padding;
-  background: #EAEEEF;
-
-  .text-block-sm_desc {
-    color: $dark-gray;
-  }
-
-  .text-block-sm_headline,
-  .text-block-sm_author {
-    font-weight: $font-weight--regular;
+  @include media($medium-up) {
+    @include span-columns(8);
   }
 }
 
 
 
+
+// Colored BG - Text Block
 
 .text-block-sm_bg {
   @extend %section-padding;
@@ -266,19 +245,59 @@ hr {
 
 
 
+// Sponsored - Text Block
 
-
-
-
-.text-block-group {
+.text-block-sm_sponsor {
   @extend %section-padding;
+  background: #EAEEEF;
+
+  @include media($medium-up) {
+    @include span-columns(8);
+  }
+
+  .text-block-sm_desc {
+    color: $dark-gray;
+  }
+
+  .text-block-sm_headline,
+  .text-block-sm_author {
+    font-weight: $font-weight--regular;
+  }
 }
 
 
-.text-block-group-pseduo > div:nth-child(2),
-.text-block-group-pseduo > div:nth-child(3) {
-  border-left: 1px dashed $light-gray;
+
+
+// Double/Triple Column - Text Block
+
+.text-block-group-pseduo {
+  @include outer-container;
+  .text-block-group {
+    @extend %section-padding;
+
+    @include media($medium-up) {
+      @include span-columns(8);
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      border-left: 1px dashed $light-gray;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
