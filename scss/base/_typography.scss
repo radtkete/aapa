@@ -179,6 +179,7 @@ hr {
 
 .job-source-feed {
   border: $base-border;
+  background: $white;
   @include media($medium-up) {
     @include span-columns(8);
   }
@@ -218,11 +219,23 @@ hr {
 .text-block-sm {
   @extend %section-padding;
   border: $base-border;
+  background: $white;
   @include media($medium-up) {
     @include span-columns(8);
   }
 }
 
+
+// Large - Text Block
+
+.text-block-lg {
+  @extend %section-padding;
+  border: $base-border;
+  background: $white;
+  @include media($medium-up) {
+    @include span-columns(16);
+  }
+}
 
 
 
@@ -232,6 +245,10 @@ hr {
   @extend %section-padding;
   background: $teal;
   border: $base-border;
+
+  @include media($medium-up) {
+    @include span-columns(8);
+  }
 
   .text-block-sm_headline {
     color: $snow;
@@ -249,6 +266,7 @@ hr {
 
 .text-block-sm_sponsor {
   @extend %section-padding;
+  border: $base-border;
   background: #EAEEEF;
 
   @include media($medium-up) {

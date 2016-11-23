@@ -17,7 +17,10 @@ module.exports = function(grunt) {
     	css: {
     		files: ['scss/**/*.scss'], // <-- when these files change
     		tasks: ['sass:dev']	// <-- run this task
-    	}
+    	},
+      html: {
+        files: '*.html'
+      }
     },
 
 
