@@ -155,11 +155,11 @@ body {
   @include display(flex)
   @include align-items(center);
   @include justify-content(center);
+  @include padding(2em);
   background: url("../img/CHLM%20Photos/iStock_000055230672.jpg");
   background-position: center;
   background-size: cover;
   min-height: 25em;
-  padding: 2em;
 
   @include media($large-screen) {
     @include justify-content(flex-end);
@@ -186,14 +186,12 @@ body {
 
 
 .accordion {
+  @include margin(0 0 $base-spacing 0);
+  @include padding(0);
   background-color: lighten($light-gray, 10%);
   border: $base-border;
-  margin: 0 0 $base-spacing 0;
-  padding: 0;
-
   li {
     border-bottom: $base-border;
-    list-style: none;
 
     &:last-child {
       border: 0;
@@ -206,8 +204,8 @@ body {
   }
 
   .submenu {
+    @include padding(25px 20px);
     display: none;
-    padding: 25px 20px;
     background-color: $snow;
     border-top: $base-border;
     box-shadow: inset 0 1px 1px darken($snow, 6%);;

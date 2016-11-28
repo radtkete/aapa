@@ -64,12 +64,9 @@ picture {
     @include padding(null $gutter null null);
 
     > img {
+      @include size(null 100%);
       display: block;
       max-width: none;
-      // height: auto;
-      // width: 187px;
-      height: 100%;
-      width: auto;
     }
   }
 
@@ -85,7 +82,6 @@ picture {
 // Side Image Content
 
 .side-image {
-
   background: $teal;
   color: $white;
 
@@ -94,13 +90,13 @@ picture {
   }
 
   .images-wrapper {
+    @include padding(3em);
     background: url("../img/pdf_placeholder.jpg");
     background-color: $teal;
     background-size: contain;
     display: block;
     // min-height: 12em;
     min-height: 446px;
-    padding: 3em;
     position: relative;
 
     @include media($large-screen) {
@@ -115,12 +111,12 @@ picture {
 
   .side-image-content {
     @include span-columns(12);
-    padding: 1em 1em 4em 1em;
+    @include padding(1em 1em 4em 1em);
 
     @include media($large-screen) {
       @include span-columns(8);
+      @include padding(4em 4em 8em 4em);
       width: 72%;
-      padding: 4em 4em 8em 4em;
     }
 
     ul {
@@ -138,8 +134,7 @@ picture {
 
 .arrow-left {
   @include triangle(80px, $teal, left);
-  position: absolute;
-  right: 0;
+  @include position(absolute, null 0 null null);
 }
 
 
@@ -156,6 +151,7 @@ picture {
   justify-content: space-between;
 
   .card {
+    @include margin(0 1em $base-spacing 1em);
     background-color: lighten($base-border-color, 10%);
     border: $base-border;
     border-radius: $base-border-radius;
@@ -163,11 +159,11 @@ picture {
     cursor: pointer;
     flex-basis: 15em;
     flex-grow: 1;
-    margin: 0 1em $base-spacing 1em;
     position: relative;
     transition: all 0.2s ease-in-out;
 
     .card-image {
+      @include border-top-radius($base-border-radius);
       background-color: $color-secondary;
       max-height: 220px;
       height: auto;

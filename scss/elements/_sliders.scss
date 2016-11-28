@@ -13,8 +13,8 @@
 }
 
 .testimonial {
-  margin: 0;
-  padding: 0;
+  @include margin(0);
+  @include padding(0);
   background: none;
   border: none;
   color: $snow;
@@ -35,7 +35,7 @@
 }
 
 .testimonial-icon {
-  margin: 0 auto 7px auto;
+  @include margin(0 auto 7px auto);
   text-align: center;
   font-size: 32px;
   color: $snow;
@@ -49,13 +49,13 @@
 }
 
 .owl-theme .owl-controls .owl-buttons div {
+  @include margin(-23px 0 0 0); // Half of the prev/next buttons height here in negatives to center them perfectly
   font-size: 40px;
   line-height: 1;
   background: transparent;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-radius: 0;
-  margin: -23px 0 0 0; // Half of the prev/next buttons height here in negatives to center them perfectly
 }
 
 .owl-prev,

@@ -168,7 +168,7 @@ hr {
 
 
 .job-item {
-  padding: 25px 20px;
+  @include padding(25px 20px);
   border-bottom: $base-border;
 }
 

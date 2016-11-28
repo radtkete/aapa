@@ -1,11 +1,11 @@
 #{$all-buttons},
 .btn {
+  @include inline-block;
   background-image: none;
   background-color: $action-color;
   border: 2px solid transparent;
   color: $white;
   cursor: pointer;
-  display: inline-block;
   font-family: $base-font-family;
   font-size: em(14px);
   font-weight: $font-weight--medium;

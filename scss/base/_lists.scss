@@ -38,20 +38,17 @@ dd {
   }
 
   input[type="checkbox"] + label:before {
+    @include size(1em);
+    @include padding(0);
+    @include margin(null $base-spacing null null);
+    @include inline-block;
     border: $base-border;
     content: "\00a0";
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    // margin-right: $small-spacing / 2;
-    margin-right: 24px;
-    padding: 0;
     vertical-align: middle;
   }
 
   input[type="checkbox"]:checked + label:before {
     background: $action-color;
-    // content: "\2713";\
     content: "\00a0";
     text-align: center;
   }
@@ -72,8 +69,8 @@ dd {
     display: block;
 
     &:before {
+      @include margin(null $small-spacing null null);
       content: "\25BC";
-      margin-right: 0.5em;
     }
   }
 
@@ -93,9 +90,9 @@ dd {
 // Related Content List
 
 .related-content-list {
-  padding: 25px 20px;
+  @include padding(25px 20px);
   > li {
-    margin-bottom: 25px;
+    @include margin(null null 25px null);
   }
 }
 

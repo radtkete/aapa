@@ -45,15 +45,13 @@ a {
 
 
   .footer-top {
-    padding-top: 75px;
-    padding-bottom: 50px;
+    @include padding(75px null 50px null);
     border-bottom: 6px solid $prussian-blue;
     position: relative;
     &:after {
+      @include size(6px 100%);
       content: "";
       display: block;
-      height: 100%;
-      width: 6px;
       position: absolute;
       left: 4.2152121503% * 8.5;
       top: 0px;
@@ -62,9 +60,9 @@ a {
   }
 
   .footer-bottom {
+    @include margin(25px auto);
     font-weight: $font-weight--regular;
     font-size: 14px;
-    margin: 25px auto;
     ul {
       display: block;
       margin-bottom: 15px;
@@ -83,10 +81,9 @@ a {
 }
 
 .hr-footer {
+  @include margin(10px 0);
   width: 20px;
   border-bottom: 3px solid $base-border-color;
-  margin: 0;
-  margin: 10px 0;
 }
 
 .footer-headline {
