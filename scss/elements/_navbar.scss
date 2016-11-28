@@ -3,21 +3,25 @@
   ============================== */
 
 $navigation-height: 60px;
+$nav-break: 1153px;
+$navigation-color: transparentize($white, 0.5);
 
 header.navigation {
-  $navigation-color: transparentize($white, 0.5);
-
   @include size(100% 125px);
   background-color: $color-primary;
   min-height: $navigation-height;
   z-index: 999;
   border-bottom: 5px solid $base-border-color;
 
+@include media ($large-screen) {
+  @include size(100% 120px);
+  border-bottom: 0;
+}
 
-  @include media ($large-screen) {
+  @include media ($nav-break) {
     @include size(100% $navigation-height);
-    border-bottom: 0;
   }
+
 
   .navigation-wrapper {
     @extend .container;
@@ -180,7 +184,7 @@ header.navigation {
   }
 }
 
-  @media screen and (min-width: $large-screen) and (max-width: 1153px) {
+  @media screen and (min-width: $large-screen) and (max-width: $nav-break) {
     .navigation-tools {
       @include padding(0 1em);
       float: none;
@@ -221,7 +225,7 @@ header.navigation {
 }
 
 
-@media screen and (min-width: $large-screen) and (max-width: 1153px) {
+@media screen and (min-width: $large-screen) and (max-width: $nav-break) {
   .search-container {
     @include fill-parent;
     display: block;
@@ -418,7 +422,7 @@ header.navigation {
 
 
 
-  @media screen and (min-width: $large-screen) and (max-width: 1153px) {
+  @media screen and (min-width: $large-screen) and (max-width: $nav-break) {
     .mega-menu {
       @include position(absolute, $navigation-height * 2 null null 0);
     }

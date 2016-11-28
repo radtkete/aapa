@@ -8,9 +8,13 @@
 // Sub Nav - Boxes
 
 .sub-nav-boxes {
+  display: none;
+  
+  @include media ($large-screen) {
     @include clearfix;
     @include display(flex);
     flex-flow: row wrap;
+  }
 
   .sub-nav-box {
     @include fill-parent;

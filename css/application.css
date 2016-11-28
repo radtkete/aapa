@@ -1104,20 +1104,25 @@ hr {
   Navigation
   ============================== */
 .sub-nav-boxes {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-flow: row wrap;
+  display: none;
 }
 
-.sub-nav-boxes::after {
-  clear: both;
-  content: "";
-  display: block;
+@media screen and (min-width: 900px) {
+  .sub-nav-boxes {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .sub-nav-boxes::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
 }
 
 .sub-nav-boxes .sub-nav-box {
@@ -1263,9 +1268,16 @@ header.navigation {
 
 @media screen and (min-width: 900px) {
   header.navigation {
-    height: 60px;
+    height: 120px;
     width: 100%;
     border-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1153px) {
+  header.navigation {
+    height: 60px;
+    width: 100%;
   }
 }
 
