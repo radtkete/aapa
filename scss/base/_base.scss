@@ -199,7 +199,7 @@ body {
 
     &:focus,
     &:hover {
-      background-color: lighten(lighten($light-gray, 10%), 2%);
+      // background-color: lighten(lighten($light-gray, 10%), 2%);
     }
   }
 
@@ -211,7 +211,7 @@ body {
     box-shadow: inset 0 1px 1px darken($snow, 6%);;
     &:focus,
     &:hover {
-      background-color: $light-gray;
+      // background-color: $light-gray;
     }
   }
 

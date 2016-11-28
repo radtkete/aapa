@@ -295,12 +295,12 @@ select {
 .search-container {
   display: block;
   margin: 0 auto;
+  position: relative;
 }
 
-.search-container i.search-icon {
-  position: relative;
-  float: right;
-  top: -30px;
+.search-container a.search-icon {
+  position: absolute;
+  top: 18px;
   right: 15px;
 }
 
@@ -544,8 +544,7 @@ picture {
 @media screen and (min-width: 900px) {
   .side-image .images-wrapper {
     display: table-cell;
-    width: 16.6666666667%;
-    width: auto;
+    width: 29.1666666667%;
     background-position: bottom left;
     background-size: cover;
     background-repeat: no-repeat;
@@ -561,15 +560,14 @@ picture {
 @media screen and (min-width: 900px) {
   .side-image .side-image-content {
     display: table-cell;
-    width: 33.3333333333%;
+    width: 75%;
     padding: 4em 4em 8em;
-    width: 72%;
   }
 }
 
 .side-image .side-image-content ul {
   list-style-type: disc;
-  padding-left: 20px;
+  padding-left: 1.5em;
 }
 
 .side-image .side-image-content li {
@@ -804,6 +802,25 @@ hr {
   margin-bottom: 18px;
 }
 
+.list-group-item-action {
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E8E8E8;
+  width: 100%;
+  color: #555;
+  text-align: inherit;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.list-group-item-action:hover {
+  color: #555;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
 .job-item, .headline-standard.upper-case {
   padding: 25px 20px;
   border-bottom: 1px solid #E8E8E8;
@@ -824,6 +841,32 @@ hr {
   .job-source-feed:last-child {
     margin-right: 0;
   }
+}
+
+.job-source-feed a.job-item, .job-source-feed a.headline-standard.upper-case {
+  display: block;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E8E8E8;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.job-source-feed a.job-item:hover, .job-source-feed a.headline-standard.upper-case:hover {
+  background-color: #FAFAFA;
+}
+
+.job-source-feed a.job-item:hover .headline-standard, .job-source-feed a.headline-standard.upper-case:hover .headline-standard {
+  text-decoration: underline;
+}
+
+.job-source-feed a.job-item .headline-standard, .job-source-feed a.headline-standard.upper-case .headline-standard {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.job-source-feed a.job-item p, .job-source-feed a.headline-standard.upper-case p {
+  margin-bottom: 10px;
+  line-height: 1;
 }
 
 .job-source-feed .job-footer {
@@ -1377,7 +1420,6 @@ header.navigation .nav-link a:focus, header.navigation .nav-link a:hover, header
 header.navigation .navigation-tools {
   position: absolute;
   top: 100px;
-  height: 60px;
   width: 100%;
   padding: 0 1em;
   background: transparent;
@@ -1424,9 +1466,21 @@ header.navigation .search-container {
   }
 }
 
+header.navigation .search-container a.search-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+@media screen and (min-width: 900px) {
+  header.navigation .search-container a.search-icon {
+    top: 18px;
+  }
+}
+
 header.navigation .search-container .search-bar {
-  border: 4px solid #E8E8E8;
-  border-radius: 4px;
+  border: 3px solid #E8E8E8;
+  border-radius: 3px;
 }
 
 @media screen and (min-width: 900px) {
@@ -1937,12 +1991,35 @@ header.navigation .button-block .button-block-btn:last-child:hover, header.navig
   margin-bottom: 10px;
 }
 
-.template-section-title {
+.small-section-title {
+  float: left;
+  display: block;
+  margin-right: 1.1650916087%;
+  width: 66.2783027971%;
+}
+
+.small-section-title:last-child {
+  margin-right: 0;
+}
+
+.small-section-title h1 {
   color: #19A8B8;
   margin-bottom: .75em;
   font-size: 30px;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+.small-section-nav {
+  float: left;
+  display: block;
+  margin-right: 1.1650916087%;
+  width: 32.5566055942%;
+  margin-top: 30px;
+}
+
+.small-section-nav:last-child {
+  margin-right: 0;
 }
 
 #marca8 {
@@ -2371,20 +2448,12 @@ body {
   border: 0;
 }
 
-.accordion li:focus, .accordion li:hover {
-  background-color: white;
-}
-
 .accordion .submenu {
   padding: 25px 20px;
   display: none;
   background-color: #FAFAFA;
   border-top: 1px solid #E8E8E8;
   box-shadow: inset 0 1px 1px #ebebeb;
-}
-
-.accordion .submenu:focus, .accordion .submenu:hover {
-  background-color: #E8E8E8;
 }
 
 .accordion .is-expanded .js-accordion-trigger {
@@ -2472,3 +2541,5 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+
+/*# sourceMappingURL=application.css.map */

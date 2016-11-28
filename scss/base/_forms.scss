@@ -88,11 +88,19 @@ select {
 .search-container {
   display: block;
   margin: 0 auto;
+  
+  position: relative;
 
-  i.search-icon {
-    position: relative;
-    float: right;
-    top: -30px;
+  // i.search-icon {
+  //   position: relative;
+  //   float: right;
+  //   top: -30px;
+  //   right: 15px;
+  // }
+
+  a.search-icon {
+    position: absolute;
+    top: 18px;
     right: 15px;
   }
 

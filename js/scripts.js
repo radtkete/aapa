@@ -88,7 +88,7 @@ $('.sub-nav-box').bind('click', function(e){
 
 
 
-      var pageSection = $(".home-section, .page-section, .small-section, .split-section");
+    var pageSection = $(".home-section, .page-section, .small-section, .split-section, .cardinal-image");
     pageSection.each(function(indx){
         
         if ($(this).attr("data-background")){

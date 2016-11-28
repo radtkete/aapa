@@ -100,8 +100,7 @@ picture {
     position: relative;
 
     @include media($large-screen) {
-      @include span-columns(4);
-      width: auto;
+      @include span-columns(7);
       background-position: bottom left;
 
       background-size: cover;
@@ -114,14 +113,13 @@ picture {
     @include padding(1em 1em 4em 1em);
 
     @include media($large-screen) {
-      @include span-columns(8);
+      @include span-columns(18);
       @include padding(4em 4em 8em 4em);
-      width: 72%;
     }
 
     ul {
       list-style-type: disc;
-      padding-left: 20px;
+      padding-left: $base-spacing;
     }
 
     li {

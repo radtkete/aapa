@@ -161,7 +161,25 @@ hr {
 
 
 
+.list-group-item-action {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: $white;
+    border-bottom: $base-border;
 
+    width: 100%;
+    color: #555;
+    text-align: inherit;
+
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    &:hover {
+      color: #555;
+      text-decoration: none;
+      background-color: #f5f5f5;
+    }
+}
 
 
 
@@ -182,6 +200,27 @@ hr {
   background: $white;
   @include media($medium-up) {
     @include span-columns(8);
+  }
+  a.job-item {
+    display: block;
+    background-color: $white;
+    border-bottom: $base-border;
+
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    &:hover {
+      background-color: $snow;
+      .headline-standard {
+        text-decoration: underline;
+      }
+    }
+    .headline-standard {
+      @include margin(10px null)
+    }
+    p {
+      margin-bottom: 10px;
+      line-height: 1;
+    }
   }
   .job-footer {
     @include clearfix;
