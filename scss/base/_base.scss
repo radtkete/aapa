@@ -190,7 +190,7 @@ body {
   @include padding(0);
   background-color: lighten($light-gray, 10%);
   border: $base-border;
-  li {
+  li.accordion-item {
     border-bottom: $base-border;
 
     &:last-child {
@@ -201,6 +201,10 @@ body {
     &:hover {
       // background-color: lighten(lighten($light-gray, 10%), 2%);
     }
+  }
+
+  ol > li {
+       margin: 0 0 0.75em;
   }
 
   .submenu {
@@ -227,6 +231,7 @@ body {
 
 .js-accordion-trigger {
   @include row(table);
+  @include pad();
 
   .title {
     @include span-columns(11);

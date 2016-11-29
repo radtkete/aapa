@@ -134,7 +134,7 @@ header.navigation {
       @include inline-block;
 
       @include media ($large-screen) {
-        padding-right: 1em;
+        // padding-right: 1em;
 
         &.active.nav-link-more {
           position: relative;
@@ -374,9 +374,16 @@ header.navigation {
 
     @include media($large-screen) {
       @include span-columns(6);
-      min-height: 400px;
-      border-right: 2px solid #D9D9D9;
-      padding-right: 1.1650916087%;
+      &:last-child {
+        border-right: transparent;
+      }
+    }
+  }
+
+
+  .mega-menu-column-lg {
+    @include media($large-screen) {
+      @include span-columns(12);
       &:last-child {
         border-right: transparent;
       }
@@ -427,5 +434,161 @@ header.navigation {
       @include position(absolute, $navigation-height * 2 null null 0);
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+.nav-link.dropdown {
+
+  .dropdown-container {
+    @include outer-container;
+    @include pad(40px default);
+      line-height: 1 !important;
+  }
+
+
+
+  .dropdown-button {
+    cursor: pointer;
+    position: relative;
+
+    &.active {
+      &:before {
+        @include triangle(34px, #EAEEEF, up);
+        @include position(absolute, null null -22px 50%);
+        @include margin(null null null -17px);
+        content: "";
+      }
+    }
+  }
+
+
+
+  .dropdown-menu {
+    @include transition (all 0.2s ease-in-out);
+    @include fill-parent;
+    @include position(absolute, $navigation-height null null 0);
+    cursor: pointer;
+    display: none;
+    overflow: show;
+    text-align: left;
+    z-index: 99999;
+    background: #EAEEEF;
+    border: 1px solid #DDDDDD;
+    border-top: 0;
+  }
+
+  @media screen and (min-width: $large-screen) and (max-width: $nav-break) {
+    .dropdown-menu {
+      @include position(absolute, $navigation-height * 2 null null 0);
+    }
+  }
+
+  .mega-menu-link-lg {
+    line-height: 1;
+    font-weight: $font-weight--medium;
+    > a {
+      color: $indigo !important;
+    }
+  }
+
+  .mega-menu-headline-sm {
+    color: $base-font-color;
+    font-weight: $font-weight--medium;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .mega-menu-link-sm a {
+    color: $base-font-color;
+    font-weight: $font-weight--regular;
+    font-size: 14px;
+    line-height: 30px;
+    &:hover {
+      color: $teal;
+    }
+  }
+
+
+  .mega-menu-column {
+    @include span-columns(6);
+  }
+
+  .mega-menu-column-lg {
+    @include span-columns(12);
+  }
+
+  .show-menu {
+    display: block;
+  }
+
+  li.divider {
+    @include size(null 2px);
+    @include margin(25px 0);
+    overflow: hidden;
+    background-color: #e5e5e5;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accordion-tabs {
+  $large-screen: 50em !default;
+
+  @include clearfix;
+  padding: 0;
+
+  .tab-header-and-content {
+    list-style: none;
+
+    @include media($large-screen) {
+      display: inline;
+    }
+  }
+
+  .tab-link {
+    display: block;
+    padding-right: 1em;
+
+    @include media($large-screen) {
+      display: inline-block;
+    }
+  }
+
+  .is-active {
+    color: #ff0000;
+  }
+
+  .tab-content {
+    display: none;
+    width: 100%;
+
+    @include media($large-screen) {
+      float: left;
+    }
+  }
+}
 
 

@@ -25,6 +25,7 @@ p {
 a {
   color: $action-color;
   text-decoration: none;
+  font-weight: $font-weight--medium;
   @include transition(color $base-duration $base-timing);
 
   &:active,
@@ -81,6 +82,7 @@ hr {
   color: $teal;
   font-size: em(16px);
   font-weight: $font-weight--medium;
+
 
   &.upper-case {
     @extend .job-item;

@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
 	<title>Document</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="utf-8">
+  <meta name="author" content="Taylor Radtke">
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -15,7 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="css/application.css">
 </head>
 
- <body class="example">
+ <body class="example" style="background: white;">
 
 
 
@@ -131,7 +136,24 @@
   <!-- Accordion -->
   <article class="accordion-wrapper">
     <ul class="accordion">
-      <li>
+      <li class="accordion-item is-expanded">
+        <a href="javascript:void(0)" class="js-accordion-trigger">
+          <span class="title">Important Notice about MACRA</span>
+          <span class="icon"><i class="fa fa-minus"></i></span>
+        </a>
+        <div class="submenu" style="display: block;">
+          <p>Please note that in the recently released MACRA Final Rule, CMS has codified its intention to allow flexibility in reporting in 2017, what it calls the ‘transition year.’ Consequently, in 2017, participants will have four reporting options:
+          </p>
+          <ol style="list-style-type: disc;">
+            <li><strong>Option 1:</strong> Submit a minimal amount of data (one quality measure OR one improvement activity OR all required measures under Advancing Care Information), receive a neutral payment adjustment in 2019</li>
+            <li><strong>Option 2:</strong> Submit data for 90 days, potentially receive a small positive adjustment in 2019</li>
+            <li><strong>Option 3:</strong> Submit a full year of data, potentially receive a moderate positive adjustment in 2019</li>
+            <li><strong>Option 4:</strong> Participate in an Advanced APM</li>
+          </ol>
+          <p><em>If you choose not to report using one of the four options above, you will receive a negative 4 percent payment adjustment in 2019.</em></p>
+        </div>
+      </li>
+      <li class="accordion-item">
         <a href="javascript:void(0)" class="js-accordion-trigger">
           <span class="title">Does the QPP affect me? If so, how?</span>
           <span class="icon"><i class="fa fa-plus"></i></span>
@@ -141,7 +163,7 @@
           <p>As a PA, you are one of the types of health professionals that will immediately qualify as an Eligible Clinician (EC) and will be required to participate in one of two reporting and reimbursement tracks: MIPS, or Advanced APMs. Health professionals are excluded from MIPS if they either are in their first year of enrollment, or if they participate in an APM, or if they fail to meet an eligibility low-volume threshold. Most health professionals will begin in MIPS and eventually transition to Advanced APMs. PAs working in certified Rural Health Clinics or federally-qualified health centers will not be required to participate in MIPS or Advanced APMs.</p>
         </div>
       </li>
-      <li>
+      <li class="accordion-item">
         <a href="javascript:void(0)" class="js-accordion-trigger">
           <span class="title">How will my reporting activities change under the QPP?</span>
           <span class="icon"><i class="fa fa-plus"></i></span>
@@ -152,7 +174,7 @@
           <p>For Advanced APMs, payment models will report to indicate they meet the Advanced APM status and that the combined work of the ECs in the entity exceeds the Qualified Practitioner (QP) thresholds.</p>
         </div>
       </li>
-      <li>
+      <li class="accordion-item">
         <a href="javascript:void(0)" class="js-accordion-trigger">
           <span class="title">How will my reimbursement change under the QPP?</span>
           <span class="icon"><i class="fa fa-plus"></i></span>
@@ -163,7 +185,7 @@
           <p>As a QP in an Advanced APM, you will be excluded from MIPS reimbursement adjustments and will receive a 5 percent lump sum bonus for the years 2019-2024. Starting in 2026, QPs will receive a higher fee schedule update.</p>
         </div>
       </li>
-      <li>
+      <li class="accordion-item">
         <a href="javascript:void(0)" class="js-accordion-trigger">
           <span class="title">My services to Medicare patients are mostly/all billed using CMS’ strict “incident to” guidelines. Does this have any effect on how I am assessed under the QPP?</span>
           <span class="icon"><i class="fa fa-plus"></i></span>
@@ -174,7 +196,7 @@
           <p>In CMS’ recent MACRA Final Rule, the agency acknowledged AAPA’s concerns regarding hidden providers, but disagreed and declined to act. AAPA will continue to emphasize the negative repercussions of this policy and advocate for a policy that allows PA services to be recognized.</p>
         </div>
       </li>
-      <li>
+      <li class="accordion-item">
         <a href="javascript:void(0)" class="js-accordion-trigger">
           <span class="title">What are the four MIPS performance categories?</span>
           <span class="icon"><i class="fa fa-plus"></i></span>
@@ -189,7 +211,7 @@
           </ul>
         </div>
       </li>
-      <li>
+      <li class="accordion-item">
         <a href="javascript:void(0)" class="js-accordion-trigger">
           <span class="title">What’s the difference between an APM and an Advanced APM?</span>
           <span class="icon"><i class="fa fa-plus"></i></span>
@@ -204,7 +226,7 @@
           <p>If the entity you work for meets these Advanced APM standards, you may be eligible to be a Qualified Practitioner (QP) under it if your entity then meets certain payment or patient thresholds. Participating as a QP under an Advanced APM is the second of two possible tracks under the QPP.</p>
         </div>
       </li>
-      <li>
+      <li class="accordion-item">
         <a href="javascript:void(0)" class="js-accordion-trigger">
           <span class="title">How do I become a Qualified Practitioner (QP) under Advanced APMs?</span>
           <span class="icon"><i class="fa fa-plus"></i></span>
@@ -214,7 +236,7 @@
           <p>If an APM entity is unable to meet these thresholds, its ECs may still be considered ‘partial QPs’ if the entity meets a lower threshold (for 2019, the partial QP thresholds are 20 percent of payments or 10 percent of patients). As a partial QP you will have the option of whether or not to participate in MIPS. If you choose not to participate you will not receive the bonus payment received for being a QP under an Advanced APM. If you choose to participate in MIPS, you will receive favorable weights in the scoring. In 2021 there will be an additional option for reaching these thresholds as CMS will begin to take into account patients covered by non-Medicare payers (such as Medicare Advantage plans).</p>
         </div>
       </li>
-      <li>
+      <li class="accordion-item">
         <a href="javascript:void(0)" class="js-accordion-trigger">
           <span class="title">Will I be disproportionately hurt being in a rural/underserved area or small practice?</span>
           <span class="icon"><i class="fa fa-plus"></i></span>
@@ -259,25 +281,32 @@
 <div id="marca4">
 
   <article class="job-source-feed">
-    <p class="headline-standard upper-case bg-gray">Related Content</p>
+    <p class="headline-standard upper-case bg-gray">Additional MACRA Resources</p>
     <ul class="fa-ul related-content-list">
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>MACRA, MIPs and Eligible Clinicians, Oh My!</li>
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum.</li>
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>Cras justo odio, dapibus ac facilisis in, egestas eget quam. </li>
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>MACRA, MIPs and Eligible Clinicians, Oh My!</li>
-    </ul>
-  </article>
-
-  <article class="job-source-feed">
-    <p class="headline-standard upper-case">Additional MACRA Resources</p>
-    <ul class="fa-ul related-content-list">
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>CMS’ Quality Payment Program Education- al Website</li>
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>Fact sheets, press releases, timelines, slide decks and more</li>
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>MACRA Proposed Rule</li>
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>O cial Proposed Rule. Comments due June 27. Expected  nalization in Fall 2016 MACRA Final Rule</li>
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>Final Rule. Filed on Oct. 19, 2016</li>
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>AAPA’s Comments on the MACRA Proposed Rule and the MACRA Request for Information (RFI)</li>
-      <li class="headline-standard"><i class="fa-li fa fa-angle-right"></i>AAPA’s Comments to the Proposed Rule, submitted June 27, 2016, and comments to the RFI, submitted Nov 17, 2015</li>
+      <li>
+        <i class="fa-li fa fa-angle-right"></i>
+        <a href="https://qpp.cms.gov/">
+        CMS’ Quality Payment Program Educational Website
+        </a>
+      </li>
+      <li>
+        <i class="fa-li fa fa-angle-right"></i>
+        <a href="https://s3.amazonaws.com/public-inspection.federalregister.gov/2016-10032.pdf">
+        MACRA Proposed Rule
+        </a>
+      </li>
+      <li>
+        <i class="fa-li fa fa-angle-right"></i>
+        <a href="https://qpp.cms.gov/docs/CMS-5517-FC.pdf">
+        MACRA Final Rule
+        </a>
+      </li>
+      <li>
+        <i class="fa-li fa fa-angle-right"></i>
+        <a href="https://www.aapa.org/threeColumnLanding.aspx?id=299">
+        AAPA’s Comments on the MACRA Proposed Rule and the MACRA Request for Information (RFI)
+        </a>
+      </li>
     </ul>
   </article>
 
@@ -366,12 +395,12 @@
 
 
 
-<script
-  src="https://code.jquery.com/jquery-1.12.4.min.js"
-  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-  crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
 
     <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.js"></script>
+
+    <script type="text/javascript" src="js/vendor/jquery.localScroll.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.sticky.js"></script>
 
     <script type="text/javascript" src="js/scripts.js"></script>
 	
