@@ -2620,13 +2620,7 @@ body {
 
 .huro .huro-content {
   max-width: 70%;
-  text-align: center;
-}
-
-@media screen and (min-width: 900px) {
-  .huro .huro-content {
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .accordion {

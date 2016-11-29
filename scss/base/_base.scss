@@ -168,11 +168,7 @@ body {
   .huro-content {
     // max-width: 20em;
     max-width: 70%;
-    text-align: center;
-
-    @include media($large-screen) {
-      text-align: left;
-    }
+    text-align: left;
   }
 }
 
