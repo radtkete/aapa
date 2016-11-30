@@ -6,28 +6,29 @@
   background-attachment: scroll !important;
 }
 
-.testimonial-wrapper {
+.testimonial-item {
   @include outer-container(900px);
+  @include padding(0 15px);
   text-align: center;
   position: relative; 
 }
 
-.testimonial {
+.testimonial-text {
   @include margin(0);
   @include padding(0);
   background: none;
   border: none;
   color: $snow;
   .body {
-    font-size: 35px;
+    @include margin(null null 30px null);
+    font-size: em(35px);
     line-height: 52px;
     font-weight: $font-weight--light;
-    margin-bottom: 30px;
   }
   .author {
-    font-size: 20px;
+    @include margin(null null 18px null);
+    font-size: em(20px);
     line-height: 1;
-    margin-bottom: 18px;
   }
   .position {
     line-height: 1;
@@ -37,7 +38,7 @@
 .testimonial-icon {
   @include margin(0 auto 7px auto);
   text-align: center;
-  font-size: 32px;
+  font-size: em(32px);
   color: $snow;
   > img {
     max-width: 50px;
@@ -50,9 +51,10 @@
 
 .owl-theme .owl-controls .owl-buttons div {
   @include margin(-23px 0 0 0); // Half of the prev/next buttons height here in negatives to center them perfectly
-  font-size: 40px;
+  font-size: em(40px);
   line-height: 1;
   background: transparent;
+  
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-radius: 0;

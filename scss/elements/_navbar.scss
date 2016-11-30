@@ -39,7 +39,7 @@ header.navigation {
     @include media ($large-screen) {
       @include position(relative, 0 null null null);
       @include padding(10px 2em 10px 1em);
-      @include size(auto null);
+      @include size(auto auto);
       float: left;
       max-height: $navigation-height;
     }
@@ -131,7 +131,7 @@ header.navigation {
 
     a {
       color: $navigation-color;
-      @include inline-block;
+      display: inline-block;
 
       @include media ($large-screen) {
         // padding-right: 1em;
@@ -169,7 +169,7 @@ header.navigation {
 .navigation-tools {
   @include position(absolute, 100px null null null);
   @include clearfix;
-  @include size(100% null);
+  @include size(100% auto);
   @include padding(0 1em);
   background: transparent;
   display: block;
@@ -251,7 +251,7 @@ header.navigation {
 
   .button-block-btn {
     @include padding(0 25px);
-    @include inline-block;
+    display: inline-block;
     color: rgba($white, 0.7);
     text-transform: uppercase;
     &:hover,
@@ -321,7 +321,7 @@ header.navigation {
         padding-right: 0.8em;
 
         a {
-          @include inline-block;
+          display: inline-block;
           color: #7B7B7B;
           font-size: 14px;
           line-height: 1;
@@ -419,7 +419,7 @@ header.navigation {
   }
 
   li.divider {
-    @include size(null 2px);
+    @include size(auto 2px);
     @include margin(25px 0);
     overflow: hidden;
     background-color: #e5e5e5;
@@ -532,7 +532,7 @@ header.navigation {
   }
 
   li.divider {
-    @include size(null 2px);
+    @include size(auto 2px);
     @include margin(25px 0);
     overflow: hidden;
     background-color: #e5e5e5;

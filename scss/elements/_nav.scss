@@ -78,7 +78,7 @@
   list-style: none;
 
   > li {
-    @include inline-block;
+    display: inline-block;
 
     + li:before {
       @include padding(0 5px);

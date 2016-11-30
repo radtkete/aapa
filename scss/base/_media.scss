@@ -13,6 +13,35 @@ picture {
   Article - Content Block
   ============================== */
 
+.hero {
+  @include display(flex)
+  @include align-items(center);
+  @include justify-content(center);
+  @include padding(2em);
+  @include margin(null null 40px null);
+  min-height: em(400px);
+
+  background: url("../img/CHLM%20Photos/iStock_000055230672.jpg");
+  background-position: center;
+  background-size: cover;
+
+  @include media($large-screen) {
+    @include justify-content(flex-end);
+  }
+
+  .hero-content {
+    max-width: 70%;
+    text-align: left;
+  }
+}
+
+
+
+
+/* ==============================
+  Article - Content Block
+  ============================== */
+
 
 .article {
   @include display(table);
@@ -29,8 +58,7 @@ picture {
     @include padding(null $gutter null null);
 
     img {
-      // height: 3em;
-      height: 219px;
+      height: em(200px);
       max-width: none;
     }
   }
@@ -61,10 +89,10 @@ picture {
   }
 
   .article-vert_image {
-    @include padding(null $gutter null null);
+    @include padding(null $base-spacing null null);
 
     > img {
-      @include size(null 100%);
+      @include size(auto 100%);
       display: block;
       max-width: none;
     }
@@ -72,7 +100,7 @@ picture {
 
   .article-vert_content {
     @include fill-parent;
-    @include padding(null null null $gutter);
+    @include padding(null null null $base-spacing);
   }
 }
 
