@@ -171,7 +171,8 @@ body {
   $grid-item-border-size: 9px;
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
-  $grid-item-height: 14em;
+  // $grid-item-height: 14em;
+  $grid-item-height: 16em;
   margin-top: $grid-item-border-size;
 
   @include clearfix;
@@ -258,6 +259,100 @@ body {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.megamenu {
+  @include position(absolute, 125px null null 0);
+  @include fill-parent;
+  @include outer-container;
+  @include pad(40px default);
+  display: none;
+  text-align: left;
+  background: #EAEEEF;
+  border: 1px solid #DDDDDD;
+  border-top: 0;
+  z-index: 999000;
+
+
+  @include media ($large-screen) {
+    top: 120px;
+  }
+
+  @include media ($nav-break) {
+    top: 60px;
+  }
+
+  .mega-menu-column {
+    @include fill-parent;
+    @include media($large-screen) {
+      @include span-columns(6);
+      &:last-child {
+        border-right: transparent;
+      }
+    }
+
+    @include media ($large-screen) {
+      @include span-columns(6);
+    }
+
+    @include media ($nav-break) {
+      @include span-columns(6);
+    }
+
+  }
+
+  .mega-menu-column-lg {
+    @include span-columns(12);
+  }
+
+
+  .mega-menu-link-lg {
+    line-height: 1;
+    font-weight: $font-weight--medium;
+    > a {
+      color: $indigo !important;
+    }
+  }
+
+  .mega-menu-headline-sm {
+    color: $base-font-color;
+    font-weight: $font-weight--medium;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+
+  .mega-menu-link-sm {
+    line-height: 30px;
+    > a {
+      color: $base-font-color;
+      font-weight: $font-weight--regular;
+      font-size: 14px;
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+
+  li.divider {
+    @include size(auto 2px);
+    @include margin(25px 0);
+    overflow: hidden;
+    background-color: #e5e5e5;
   }
 }
 

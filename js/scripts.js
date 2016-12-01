@@ -521,5 +521,53 @@ $(document).ready(function() {
 });
 
 
+// $(function(){
+//     $('#top-nav span').click(function(){
+//         divTrigger = $('#top-nav span').index(this);
+//         thisMegaMenu = $('.megamenu:eq('+divTrigger+')');
+//         $('.megamenu').slideUp(200);
+//         if(thisMegaMenu.is(":not(':visible')")){
+//         thisMegaMenu.slideDown(200);
+//         }
+// });
+
+//     $('.closeButton').on('click',function(){
+//         thisMegaMenu.slideUp(200);
+//         event.preventDefault();
+//     });
+// });
 
 
+// $(function(){
+//     $('.navbar-link.navbar-link-mm > a').click(function(){
+//         divTrigger = $('.navbar-link.navbar-link-mm > a').index(this);
+//         thisMegaMenu = $('.megamenu:eq('+divTrigger+')');
+//         $('.megamenu').slideUp(200);
+//         if(thisMegaMenu.is(":not(':visible')")){
+//         thisMegaMenu.slideDown(200);
+//         }
+// });
+
+//     $('.closeButton').on('click',function(){
+//         thisMegaMenu.slideUp(200);
+//         event.preventDefault();
+//     });
+// });
+
+
+
+$(function(){
+    $('.nav-link.navbar-link-mm > a').click(function(){
+        divTrigger = $('.nav-link.navbar-link-mm > a').index(this);
+        thisMegaMenu = $('.megamenu:eq('+divTrigger+')');
+        $('.megamenu').slideUp(200);
+        if(thisMegaMenu.is(":not(':visible')")){
+        thisMegaMenu.slideDown(200);
+        }
+});
+
+    $('.closeButton').on('click',function(){
+        thisMegaMenu.slideUp(200);
+        event.preventDefault();
+    });
+});
