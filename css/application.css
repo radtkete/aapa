@@ -1107,6 +1107,11 @@ hr {
   background-attachment: scroll !important;
 }
 
+.slider-capital {
+  background-position: center 70% !important;
+  background-image: url("../img/REV_jrn_rally_capitol_hill_2013-05-29_5654.jpg");
+}
+
 .testimonial-item {
   max-width: 900px;
   margin-left: auto;
