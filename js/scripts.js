@@ -41,7 +41,8 @@
         init_sliders();
         init_expander();
         init_accordion();
-        init_sub_nav_boxes();
+        // init_sub_nav_boxes();
+        init_sub_nav_boxes_advocacy();
     });
     
     $(window).resize(function(){
@@ -474,24 +475,23 @@ function init_accordion(){
  --------------------------------------------- */
 
 
-function init_sub_nav_boxes(){
+function init_sub_nav_boxes_advocacy(){
     (function($){
 
+        $('.sub-nav-footer').show();
+        $('.sub-nav-box.advocacy-policy-central').addClass("is-active");
 
-        $('.sub-nav-box').bind('click', function(e){
-          $( ".sub-nav-footer" ).slideToggle( "slow", function() {
+        $('.sub-nav-box.advocacy-policy-central').bind('click', function(e){
+          $('ul.advocacy-policy-central').slideToggle( "slow", function() {
             // Animation complete.
           });
-          $(this).toggleClass('active');
-          $(this).find('.fa-plus').toggleClass("fa-minus");
+          $(this).toggleClass('is-active');
           e.preventDefault();
         });
 
 
     })(jQuery);
 }
-
-
 
 
 

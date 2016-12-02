@@ -40,7 +40,12 @@
       flex-grow: 1;
       flex-shrink: 0;
 
-        &.active {
+        &.is-active {
+
+        .fa.fa-plus:before {
+          content: "\f068" !important;
+        }
+
           &:after {
             @include triangle(34px, #EAEEEF, up);
             @include position(absolute, null null 0 50%);
@@ -61,7 +66,6 @@
       color: $base-font-color;
     }
 
-    &:focus,
     &:hover {
       background: #EAEEEF;
     }
