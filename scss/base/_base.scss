@@ -474,8 +474,110 @@ body {
 
 
 
+  @media screen and (min-width: 900px)  {
+    .nav-accordion {
+      display: none;
+    }
+  }
 
 
+.nav-accordion {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 24px;
+
+
+  .nav-accordion-trigger {
+    display: inline-block;
+    // position: relative;
+    // &:before {
+    //   color: $white;
+    //   font: normal normal normal 14px/1 FontAwesome;
+    //   content: "\f067";
+    //   position: absolute;
+    //   top: 3px;
+    //   right: 0;
+    // }
+  }
+
+  ul.submenu {
+    display: none;
+    margin-left: 24px;
+    color: $white;
+  }
+
+.submenu-headline {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: $font-weight--bold;
+  margin-top: 30px;
+  margin-bottom: 18px;
+  a {
+    color: $white;
+  }
+}
+
+
+  ul.submenu--nav {
+    margin-left: 24px;
+    > li {
+      font-size: 15px;
+      font-weight: $font-weight--regular;
+      line-height: 60px;
+      a {
+        color: $white;
+      }
+    }
+  }
+
+
+  &.is-expanded {
+    .nav-accordion-trigger {
+    color: red;
+    .one-one {
+      &:before {
+        content: "\f068";
+      }
+    }
+    }
+  }
+
+}
+
+
+.submenu--nav {
+  border-left: 2px solid #007A87;
+  padding-left: 24px;
+}
+
+.one-one {
+  font-size: 18px;
+  line-height: 1;
+  color: $white;
+  font-weight: $font-weight--medium;
+  margin-bottom: 10px;
+  padding-right: 24px;
+  display: inline-block;
+  position: relative;
+  &:before {
+    color: $white;
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f067";
+    position: absolute;
+    top: 3px;
+    right: 0;
+  }
+}
+
+
+.one-two {
+  display: block;
+  font-size: 13px;
+  line-height: 1;
+  color: #E8E8E8;
+  font-weight: $font-weight--medium;
+  text-transform: uppercase;
+}
 
 
 
