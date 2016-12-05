@@ -40,21 +40,20 @@
       flex-grow: 1;
       flex-shrink: 0;
 
-        &.is-active {
+      &.is-active {
 
         .fa.fa-plus:before {
           content: "\f068" !important;
         }
 
-          &:after {
-            @include triangle(34px, #EAEEEF, up);
-            @include position(absolute, null null 0 50%);
-            content: "";
-            margin-left: -17px;
-            z-index: 10;
-          }
+        &:after {
+          @include triangle(34px, #EAEEEF, up);
+          @include position(absolute, null null 0 50%);
+          content: "";
+          margin-left: -17px;
+          z-index: 10;
         }
-
+      }
     }
 
     .author {
