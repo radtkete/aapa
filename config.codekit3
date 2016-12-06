@@ -15,10 +15,10 @@
 		"oAP": "\/_gitignore",
 		"oF": 0
 		},
-	"\/buttons.html": {
+	"\/content-blocks.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/buttons.html",
+		"oAP": "\/content-blocks.html",
 		"oF": 0
 		},
 	"\/css\/application.css": {
@@ -31,6 +31,12 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/css\/application.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/application.css.map",
+		"oF": 0
+		},
 	"\/css\/normalize.css": {
 		"aP": 0,
 		"bl": 0,
@@ -41,10 +47,40 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/elements_content-blocks.html": {
+	"\/elements_buttons.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elements_content-blocks.html",
+		"oAP": "\/elements_buttons.html",
+		"oF": 0
+		},
+	"\/elements_color-palette.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elements_color-palette.html",
+		"oF": 0
+		},
+	"\/elements_content-block.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elements_content-block.html",
+		"oF": 0
+		},
+	"\/elements_features.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elements_features.html",
+		"oF": 0
+		},
+	"\/elements_navbars.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elements_navbars.html",
+		"oF": 0
+		},
+	"\/elements_text-block.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elements_text-block.html",
 		"oF": 0
 		},
 	"\/fonts\/benton-bold.otf": {
@@ -134,6 +170,288 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/img\/20140217_3320.jpg": {
+		"ft": 16384,
+		"iS": 599310,
+		"oA": 0,
+		"oAP": "\/img\/20140217_3320.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/GettyImages-168360267.jpg": {
+		"ft": 16384,
+		"iS": 862004,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/GettyImages-168360267.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/GettyImages-180408180.jpg": {
+		"ft": 16384,
+		"iS": 596373,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/GettyImages-180408180.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/GettyImages-487610916.jpg": {
+		"ft": 16384,
+		"iS": 1034788,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/GettyImages-487610916.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/GettyImages-536907561.jpg": {
+		"ft": 16384,
+		"iS": 1198764,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/GettyImages-536907561.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/GettyImages-547016603.jpg": {
+		"ft": 16384,
+		"iS": 1094579,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/GettyImages-547016603.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/iStock_000055230672.jpg": {
+		"ft": 16384,
+		"iS": 335045,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/iStock_000055230672.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/iStock_000055230672_XXXLarge.jpg": {
+		"ft": 16384,
+		"iS": 4311683,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/iStock_000055230672_XXXLarge.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/placeholder-187x243.jpg": {
+		"ft": 16384,
+		"iS": 8244,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/placeholder-187x243.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/placeholder-366x220.jpg": {
+		"ft": 16384,
+		"iS": 14741,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/placeholder-366x220.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/placeholder-390x219.jpg": {
+		"ft": 16384,
+		"iS": 7820,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/placeholder-390x219.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/placeholder-393x220.jpg": {
+		"ft": 16384,
+		"iS": 14829,
+		"oA": 0,
+		"oAP": "\/img\/CHLM Photos\/placeholder-393x220.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/CHLM Photos\/Thumbs.db": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/CHLM Photos\/Thumbs.db",
+		"oF": 0
+		},
+	"\/img\/huddle-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/huddle-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/chatting.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/chatting.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/computer-monitor.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/computer-monitor.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/federal\/hands.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/federal\/hands.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/federal\/networking.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/federal\/networking.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/federal\/people.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/federal\/people.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/federal\/signs.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/federal\/signs.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/hand-gesture.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/hand-gesture.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/icon_benefit.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/icon_benefit.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/icon_faq.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/icon_faq.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/icon_join.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/icon_join.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/icon_pa-connect.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/icon_pa-connect.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/open-book.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/open-book.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/promotion.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/promotion.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/sand-clock.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/sand-clock.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/users.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/users.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/weekly-calendar.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/weekly-calendar.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/left-quote.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/left-quote.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/logo-50.png": {
 		"ft": 32768,
 		"iS": 7690,
@@ -160,6 +478,24 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/quotations-button.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/quotations-button.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/REV_jrn_rally_capitol_hill_2013-05-29_5654.jpg": {
+		"ft": 16384,
+		"iS": 2925218,
+		"oA": 0,
+		"oAP": "\/img\/REV_jrn_rally_capitol_hill_2013-05-29_5654.jpg",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/testimonial_bg.jpg": {
 		"ft": 16384,
 		"iS": 260241,
@@ -172,7 +508,7 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/index.html",
-		"oF": 1
+		"oF": 0
 		},
 	"\/js\/scripts.js": {
 		"ft": 64,
@@ -182,6 +518,81 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/js\/vendor\/jquery-1.11.2.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/vendor\/jquery-1.11.2.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/vendor\/jquery.localScroll.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/vendor\/jquery.localScroll.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/vendor\/jquery.sticky.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/vendor\/jquery.sticky-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/lp-member.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/lp-member.html",
+		"oF": 0
+		},
+	"\/lp-student.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/lp-student.html",
+		"oF": 0
+		},
+	"\/lp_advocacy.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/lp_advocacy.html",
+		"oF": 0
+		},
+	"\/lp_federal-advocacy.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/lp_federal-advocacy.html",
+		"oF": 0
+		},
+	"\/lp_ICD-10.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/lp_ICD-10.html",
+		"oF": 0
+		},
+	"\/lp_state-advocacy.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/lp_state-advocacy.html",
+		"oF": 0
+		},
+	"\/MACRA.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/MACRA.html",
+		"oF": 0
+		},
+	"\/navbars.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/navbars.html",
+		"oF": 0
 		},
 	"\/node_modules": {
 		"ft": 65536,
@@ -1389,6 +1800,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/scss\/elements\/_sliders.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/elements\/_template.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/scss\/elements\/_template.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
