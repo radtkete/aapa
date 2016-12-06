@@ -94,7 +94,7 @@ header.navigation {
   .navigation-menu {
     @include clearfix;
     @include fill-parent;
-    @include padding(20px 0 0 0);
+    @include padding(50px 0 0 0);
     @include margin(0 auto);
 
     background-color: $color-primary;
@@ -121,12 +121,13 @@ header.navigation {
     display: block;
     line-height: $navigation-height;
     overflow: hidden;
-    padding-right: 0.8em;
-    text-align: right;
+    padding-right: 1em;
+    padding-left: 24px;
 
     @include media ($large-screen) {
       display: inline;
       width: auto;
+      padding-left: 0px;
     }
 
     > a {

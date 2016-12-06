@@ -1449,7 +1449,7 @@ header.navigation nav {
 
 header.navigation .navigation-menu {
   width: 100%;
-  padding: 20px 0 0;
+  padding: 50px 0 0;
   margin: 0 auto;
   background-color: #003c69;
   display: none;
@@ -1480,14 +1480,15 @@ header.navigation .nav-link {
   display: block;
   line-height: 60px;
   overflow: hidden;
-  padding-right: 0.8em;
-  text-align: right;
+  padding-right: 1em;
+  padding-left: 24px;
 }
 
 @media screen and (min-width: 900px) {
   header.navigation .nav-link {
     display: inline;
     width: auto;
+    padding-left: 0px;
   }
 }
 
@@ -2940,9 +2941,9 @@ body {
 }
 
 .nav-accordion {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 24px;
 }
 
 .nav-accordion .nav-accordion-trigger {
@@ -2979,6 +2980,11 @@ body {
 
 .nav-accordion ul.submenu--nav > li a {
   color: #FFFFFF;
+}
+
+.nav-accordion.is-expanded {
+  background: #00335a;
+  border-bottom: 6px solid #002D4B !important;
 }
 
 .nav-accordion.is-expanded .nav-accordion-trigger {
